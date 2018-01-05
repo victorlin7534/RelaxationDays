@@ -1,4 +1,4 @@
-public class Child extends Human{
+public class Child extends Human implements Nerd,Athlete{
 
   //instance variables
 
@@ -42,7 +42,16 @@ public class Child extends Human{
   //**************************************************************************
 
   public void makeFriends(){
-      System.out.println("Finally, some companionship.");
+    System.out.println("Finally, some companionship.");
   }
+
+  public void study(){
+    _mentalHealth += 0.5;
+  }
+
+public void workout(){
+  System.out.println("Getting a good pump");
+  _physHealth += 0.5;
+}
 
 } //end class Child

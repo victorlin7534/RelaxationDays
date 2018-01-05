@@ -1,78 +1,38 @@
-import cs1.Keyboard;
-//handles the dialogue and events
+//import cs1.Keyboard;
+import java.io.File;
+import java.util.Scanner;
+import java.io.FileNotFoundException;
+
+//Events handles the dialogue
 public class Events{
 
-  public static void SOP(Object x){
-    System.out.println(x);
-  }
-
-  public static boolean sickness(Human o,String type){
-    if(type.equals("physical")){
-      o.setPhysical(o.getPhysical() - 0.5);
-    }else{
-      o.setMental(o.getMental() - 0.5);
-    }
-    return true;
-  }
-
-  public static void carHit(Human o){
-    System.out.println("Did that dude not see the red light? Where's the ambulance!?");
-    if(Math.random() < .5){
-      o.die();
-      System.out.println(o.getName() + " has passed away.");
-    }
-    else{
-      System.out.println("Is this the end, or is there more?");
-      System.out.println("a)Yes this is the end\nb)No, take me to the Hospital");
-      String choice = Keyboard.readString();
-      if(choice.equals("a")){
-        o.die();
+  public static boolean atParty(int lineNum){
+    File file = new File("Party.txt");
+    try {
+      //Create a new Scanner object which will read the data from the file passed in.
+      //Check if there is another line and loop through until desired line number is found.
+      //When desired line number found, print it.
+      Scanner scanner = new Scanner(file);
+      int lineCtr = 1;
+      while (scanner.hasNextLine()) {
+        String line = scanner.nextLine();
+        if(lineCtr == lineNum)
+        {
+          System.out.println(line);
+        }
+        lineCtr +=1 ;
       }
-      else{
-        atHospital(o);
-      }
+    } catch (FileNotFoundException e) {
+      e.printStackTrace(); //helps trace the exception
     }
-  }
-
-
-  //********SCHOOL METHODS*****************
-  public static boolean atSchool(Human o){
-    SOP("Another beautiful day at school for " + o.getName());
-
     return true;
   }
 
-  public static void takeTest(Human o){
-    SOP("Test time!");
-    SOP("What is the worst case run time of Selection Sort?");
-    SOP("a) n b) n^2 c) A Thinker is Capable of Great Things");
-    String choice = Keyboard.readString();
-    if(choice.equals("b")){
-      SOP("You are correct");
-    }else{
-      SOP("You are incorrect; the answer is b, n^2");
-    }
-  }
-  //***************************************
-  public static boolean atHospital(Human o){
-    SOP("Welcome to the Hospital");
-    //do hospital stuff
-    return true;
-  }
-
-
-//**********PARTY METHODS******************
-  public static boolean atParty(Human o){
-
-
-    return true;
-  }
-
-  public static void drink(Human o){
-    System.out.println("Chug! Chug! Chug!");
-    _physHealth -= 1.0f;
-  }
-
-//*****************************************
+//testing
+/*  public static void main(String[] args){
+    atParty(1);
+    atParty(2);
+    atParty(3);
+  }*/
 
 }//end class

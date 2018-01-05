@@ -17,6 +17,34 @@ public abstract class Human{
   protected int _age;
   protected ArrayList<String> _friends;
 
+
+  //*******METHODS NEEDED TO RUN LIFE**************************
+
+  public boolean life(){
+    this.childYears();
+    this.teenYears();
+    this.adultYears();
+    return true;
+  }
+
+  public void childYears(){
+    while(getAge() < 13){
+      System.out.println("yeet");
+      growUp();
+    }
+  }
+
+  public void teenYears(){
+
+  }
+
+  public void adultYears(){
+
+  }
+
+  //****************************************************
+
+
   //*************ACCESSOR METHODS*********************
   //accessor method for the name of the human
   public String getName(){
@@ -68,6 +96,16 @@ public abstract class Human{
 
   public void setMental(double health){
     _mentalHealth = health;
+  }
+  //***************************************************
+
+  //prints the humans characteristics.
+  //used as human progresses through life.
+  public void stats(){
+    System.out.println("Physical Health: " + getPhysical());
+    System.out.println("Mental Health: " + getMental());
+    System.out.println("Age: " + getAge());
+    System.out.println("Money: " + getMoney());
   }
 
   //checks if human is dead

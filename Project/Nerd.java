@@ -1,3 +1,5 @@
-public class Nerd{
+public interface Nerd{
 
-}//end class
+void study();
+
+}//end interface
