@@ -1,6 +1,6 @@
 RelaxationDays #3
 Daniel Gelfand, Victor Lin, Hasif Ahmed
-APCS pd2
+APCS1 pd2
 
 TO-DO LIST:
 
