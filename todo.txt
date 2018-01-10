@@ -1,0 +1,25 @@
+RelaxationDays #3
+Daniel Gelfand, Victor Lin, Hasif Ahmed
+APCS pd2
+
+TO-DO LIST:
+
+1) Call life() in Woo while Human is alive. Comment out while in development stage.
+
+2) Create the methods a Child will use.
+
+3) Update childYears in Human with Child methods to reflect a child's life.
+
+4) Create the methods a Teen will use.
+
+5) Update teenYears in Human with Teen methods to reflect a teen's life.
+
+6) Create minigames that handle certain events (ex: A party will have a "Just Dance" type game).
+
+7) Write more dialogue that a human might need to used.
+
+8) Assign an Adult a job or homelessness based on his school performance and/or habits.
+
+9) Create Adult specific METHODS.
+
+10) Update adultYears in Human with Adult methods to reflect an adult's life.
