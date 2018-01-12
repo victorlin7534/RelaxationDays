@@ -26,17 +26,13 @@ public class Settings{
   //   return talk(file,lineNum);
   // }
   //
-  public static boolean takeTest(int line){
-    File file = new File("Test.txt");
-    return talk(file,lineNum);
-  }
 
-  public static boolean atHospital(int line){
+  public static boolean atHospital(int lineNum){
     File file = new File("Hospital.txt");
     return talk(file,lineNum);
   }
 
-  public static boolean atWork(int line){
+  public static boolean atWork(int lineNum){
     File file = new File("Work.txt");
     return talk(file,lineNum);
   }

@@ -7,7 +7,7 @@ public class Teen extends Human{
   private int chance; //probability to obtain a significant other
 
   //default constructor
-  public Teen(Child o){
+  public Teen(Human o){
     _name = o._name;
     _physHealth = o._physHealth;
     _mentalHealth = o._mentalHealth;
@@ -15,7 +15,7 @@ public class Teen extends Human{
     _money = o._money;
   }
 
-  public void growUp(){
+/*  public void growUp(){
     if(_age == 19){
       if(Math.random() > 0.5){
         _mentalHealth -= 2;
@@ -26,7 +26,7 @@ public class Teen extends Human{
     }else{
       _age++;
     }
-  }
+  }*/
 
   public void study(){
     _mentalHealth += 0.25;
@@ -57,7 +57,7 @@ public class Teen extends Human{
       }
 
       else if(probability < 0.5){
-        System.out.println("Did you not take health class?" + getName() + ".you got " + STDS[0]);
+        System.out.println("Did you not take health class?" + getName() + ".you got (disease l8r)");
       }
 
       else if(probability < 0.75){
@@ -65,7 +65,7 @@ public class Teen extends Human{
       }
 
       else{
-        System.out.println("You're now a parent and you also got " + STDS[0]);
+        System.out.println("You're now a parent and you also got ");
       }
       break;
       case "no":

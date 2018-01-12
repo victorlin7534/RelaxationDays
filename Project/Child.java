@@ -5,8 +5,8 @@ public class Child extends Human implements Nerd,Athlete{
   //default constructor
   public Child(){
     _name = "Life";
-    _physHealth = 1.0;
-    _mentalHealth = 1.0;
+    _physHealth = 10.0;
+    _mentalHealth = 10.0;
     _money = 0;
     _age = 0;
   }
