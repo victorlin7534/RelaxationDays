@@ -34,21 +34,33 @@ public static void main(String []args){
   System.out.println("Give the human a name: ");
   Human a = new Child(Keyboard.readString());
   //life method found in human
-  while(!a.isDead() && a.getAge() < 21){
-
+  while(!a.isDead() && a.getAge() < 100){
+    System.out.println(a);
     if(a.getAge() < 13){ //Child
-      Settings.atSchool(1);
+      System.out.println("\nWhat do you want to do? a) school b) c)");
+      String act = Keyboard.readString();
+      switch(act){
+        case "a":
+          System.out.println("Your score: " + Settings.atSchool(a));
+          break;
+      }
     }
 
     else if(a.getAge() < 18){//Teen
       Human a_temp = new Teen(a); //Teen with values from Human a
       a = a_temp;
+      System.out.println("\nWhat do you want to do? a)school b) c)");
+      String act = Keyboard.readString();
+      switch(act){
+        case "a":
+          System.out.println("Your score: " + Settings.atSchool(a));
+          break;
+      }
     }
     else{
       Human a_temp = new Adult(a);
       a = a_temp;
     }
-    System.out.println(a);
     a.growUp();
   }
 }

@@ -59,12 +59,13 @@ public abstract class Human{
 
   public void sleep(){_mentalHealth += 1.0;}
 
-public String toString(){
-  return "Physical health: " + getPhysical() +
-  "\nMental health: " + getMental() +
-  "\nAge: " + getAge() +
-  "\nMoney: " + getMoney();
-}
+  public String toString(){
+    return "\nName: " + getName() +
+    "\nPhysical health: " + getPhysical() +
+    "\nMental health: " + getMental() +
+    "\nAge: " + getAge() +
+    "\nMoney: " + getMoney();
+  }
 
   /*public void change(Human obj){
       if(getAge() == 13){//Teen
