@@ -31,7 +31,8 @@ public class Woo{
 }*/
 
 public static void main(String []args){
-  //Minigames game = new Minigames();
+  Minigames game = new Minigames();
+  game.Play();
   System.out.println("PUSH! PUSH!..... 'wah' .... 'wah' " + "\n");
 
   //Escaped string to facilitate compiling - Baby

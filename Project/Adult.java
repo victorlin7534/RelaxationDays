@@ -9,7 +9,13 @@ public class Adult extends Human{
   }
 
   public void makeFriends(){
-    
+
+  }
+
+  //just put it here so i can test woo
+  public void workout(){
+    System.out.println("This is some good  cadiovascular exercise for " + this.getName() + ". + 0.5 physical health");
+    _physHealth += 0.5;
   }
 
 }//end class
