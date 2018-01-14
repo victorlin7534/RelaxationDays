@@ -1,5 +1,8 @@
 import cs1.Keyboard;
 import java.util.*;
+import cs1.Keyboard;
+import java.io.*;
+import java.util.Scanner;
 
 public class Woo{
 
@@ -28,21 +31,46 @@ public class Woo{
 }*/
 
 public static void main(String []args){
-
+  //Minigames game = new Minigames();
   System.out.println("PUSH! PUSH!..... 'wah' .... 'wah' " + "\n");
-  System.out.println(" `\\.____|_\\\r\n   \\______/\r\n    (_)(_)\r\n");
+  //Escaped string to facilitate compiling - Baby
+  //System.out.println(" `\\.____|_\\\r\n   \\______/\r\n    (_)(_)\r\n");
+  System.out.println("           .-@-.\r\n          /     \\\r\n         |       |\r\n         ( o   o )\r\n        .-\\  ^  /-.\r\n       /   '-@-'   \\");
+  System.out.println();
   System.out.println("Give the human a name: ");
   Human a = new Child(Keyboard.readString());
-  //life method found in human
+
+
+  System.out.println(a._name + " undergoes a developmental period of his/her infant life.");
+
+  //Escaped string to facilitate compiling - Developmental baby art
+  System.out.println("         \r\n               ,==.              |~~~\r\n              /  OO\\             |\r\n              \\c  -_)         |~~~\r\n               `) (           |\r\n               /   \\       |~~~\r\n              /   \\ \\      |\r\n             ((   /\\ \\_ |~~~ \r\n              \\\\  \\ `--`|\r\n              / / /  |~~~\r\n         ___ (_(___)_|");
+
+  System.out.println(a._name + " learns how to babble, crawl, walk, and eventually talk.\n");
+  System.out.println("It's time for "  + a._name + " to start his journey to become a 'real person'... Prepare to simulate.");
+
+  //Go to school at six years old
+  a._age = 6.0;
+
   while(!a.isDead() && a.getAge() < 100){
+    System.out.println();
     System.out.println(a);
     if(a.getAge() < 13){ //Child
-      System.out.println("\nWhat do you want to do? a) school b) c)");
+      System.out.println("\nWhat should " + a._name + " do today? a) school b) playground c) videogames");
       String act = Keyboard.readString();
       switch(act){
+
         case "a":
-          System.out.println("Your score: " + Settings.atSchool(a));
-          break;
+        System.out.println("\n" + a._name + " goes to school that day to acquire knowledge.\n");
+        Settings.atSchool(a);
+        break;
+
+        case "b":
+        a = Settings.atPark(a);
+        break;
+
+        case "c":
+        System.out.println("game here");
       }
     }
 
@@ -53,8 +81,8 @@ public static void main(String []args){
       String act = Keyboard.readString();
       switch(act){
         case "a":
-          System.out.println("Your score: " + Settings.atSchool(a));
-          break;
+        //System.out.println("Your score: " + Settings.atSchool(a));
+        break;
       }
     }
     else{

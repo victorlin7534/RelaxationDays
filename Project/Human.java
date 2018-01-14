@@ -25,7 +25,7 @@ public abstract class Human{
   public ArrayList<String> getFriends(){return _friends;}
 
   //******************MUTATORS**************************
-  public void setAge(int a){_age = a;}
+  public void setAge(double a){_age = a;}
 
   public void setMoney(int m){_money = m;}
 
@@ -77,6 +77,6 @@ public abstract class Human{
   }*/
   //***********ABSTRACT METHODS UNDER HERE ****************
 
-  public abstract void makeFriends();
+  //public abstract void makeFriends();
 
 } //end class

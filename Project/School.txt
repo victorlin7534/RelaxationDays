@@ -10,3 +10,8 @@ What is the derivative of the equation x^2 + x + 1? a) x + 1 b) 2x+1 c) 2x + x
 b
 What year did Ghandi walk the Salt March? a) 1930 b) 1900 c) 1945
 a
+'Repeat after me children - A is for apple, B is for book, C is for cat...'
+'So kid, here is the multiplication table ... 1 * 2 = 2 .... 6 * 6 = 36'
+'Okay students, pour the water in the soil for the plant to grow.'
+'Wake up sleepy head or you'll fail in life!'
+'Pay attention so you dont fail the next test!'
