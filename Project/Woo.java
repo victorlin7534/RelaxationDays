@@ -33,10 +33,11 @@ public class Woo{
 public static void main(String []args){
   //Minigames game = new Minigames();
   System.out.println("PUSH! PUSH!..... 'wah' .... 'wah' " + "\n");
+
   //Escaped string to facilitate compiling - Baby
-  //System.out.println(" `\\.____|_\\\r\n   \\______/\r\n    (_)(_)\r\n");
   System.out.println("           .-@-.\r\n          /     \\\r\n         |       |\r\n         ( o   o )\r\n        .-\\  ^  /-.\r\n       /   '-@-'   \\");
   System.out.println();
+
   System.out.println("Give the human a name: ");
   Human a = new Child(Keyboard.readString());
 
@@ -53,24 +54,25 @@ public static void main(String []args){
   a._age = 6.0;
 
   while(!a.isDead() && a.getAge() < 100){
-    System.out.println();
     System.out.println(a);
     if(a.getAge() < 13){ //Child
-      System.out.println("\nWhat should " + a._name + " do today? a) school b) playground c) videogames");
+      System.out.println("\nWhat should " + a._name + " do today? a) school b) playground c) stay home");
       String act = Keyboard.readString();
       switch(act){
 
         case "a":
         System.out.println("\n" + a._name + " goes to school that day to acquire knowledge.\n");
+
         Settings.atSchool(a);
+
         break;
 
         case "b":
-        a = Settings.atPark(a);
+        Settings.atPark(a);
         break;
 
         case "c":
-        System.out.println("game here");
+        Settings.atHome(a);
       }
     }
 

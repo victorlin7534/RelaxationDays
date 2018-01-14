@@ -50,7 +50,7 @@ public class Child extends Human implements Nerd,Athlete{
   }
 
 public void workout(){
-  System.out.println("Getting a good pump");
+  System.out.println("This is some good  cadiovascular exercise for " + this.getName() + ". + 0.5 physical health");
   _physHealth += 0.5;
 }
 

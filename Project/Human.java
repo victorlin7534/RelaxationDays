@@ -39,44 +39,57 @@ public abstract class Human{
   //prints the humans characteristics.
   //used as human progresses through life.
   /*public void stats(){
-    System.out.println("Physical Health: " + getPhysical());
-    System.out.println("Mental Health: " + getMental());
-    System.out.println("Age: " + getAge());
-    System.out.println("Money: " + getMoney());
-  }*/
+  System.out.println("Physical Health: " + getPhysical());
+  System.out.println("Mental Health: " + getMental());
+  System.out.println("Age: " + getAge());
+  System.out.println("Money: " + getMoney());
+}*/
 
-  //checks if human is dead
-  public boolean isDead(){return (_physHealth == 0 || _mentalHealth == 0);}
+//checks if human is dead
+public boolean isDead(){
+  return (_physHealth <= 0 || _mentalHealth <= 0);
+}
 
-  //human dies
-  public void die(){
-    _physHealth = 0.0;
-    _mentalHealth = 0.0;
-    System.out.println(_name + " has died.");
-  }
+//human dies
+public void die(){
+  _physHealth = 0.0;
+  _mentalHealth = 0.0;
+  System.out.println(_name + " has died.");
+}
 
-  public void growUp(){_age += 0.5;}
+public void growUp(){_age += 0.5;}
 
-  public void sleep(){_mentalHealth += 1.0;}
+public void sleep(){
+  System.out.println(this.getName() + " feels very sleepy and takes a long rest.");
+  System.out.println("His body is allowd to rest and gains +1.0 mental health");
+  _mentalHealth += 1.0;
+}
 
-  public String toString(){
-    return "\nName: " + getName() +
-    "\nPhysical health: " + getPhysical() +
-    "\nMental health: " + getMental() +
-    "\nAge: " + getAge() +
-    "\nMoney: " + getMoney();
-  }
+public String toString(){
+  return "\nName: " + getName() +
+  "\nPhysical health: " + getPhysical() +
+  "\nMental health: " + getMental() +
+  "\nAge: " + getAge() +
+  "\nMoney: " + getMoney();
+}
 
-  /*public void change(Human obj){
-      if(getAge() == 13){//Teen
-        Human obj = new Teen(obj);
-      }else if(getAge() == 19){//Adult
-      // Human a = new Adult(a);
-      System.out.println("adult to be worked on");
-      }
-  }*/
-  //***********ABSTRACT METHODS UNDER HERE ****************
+public void getInjured() {
+  _physHealth -= 1.0;
+  System.out.println("Physical health decreased by 1.0");
+}
 
-  //public abstract void makeFriends();
+/*public void change(Human obj){
+if(getAge() == 13){//Teen
+Human obj = new Teen(obj);
+}else if(getAge() == 19){//Adult
+// Human a = new Adult(a);
+System.out.println("adult to be worked on");
+}
+}*/
+
+//***********ABSTRACT METHODS UNDER HERE ****************
+
+//public abstract void makeFriends();
+public abstract void workout();
 
 } //end class
