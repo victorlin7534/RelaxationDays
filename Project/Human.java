@@ -34,62 +34,115 @@ public abstract class Human{
   public void setPhysical(double health){_physHealth = health;}
 
   public void setMental(double health){_mentalHealth = health;}
-  //***************************************************
+  //**************************************************
 
-  //prints the humans characteristics.
-  //used as human progresses through life.
-  /*public void stats(){
-  System.out.println("Physical Health: " + getPhysical());
-  System.out.println("Mental Health: " + getMental());
-  System.out.println("Age: " + getAge());
-  System.out.println("Money: " + getMoney());
-}*/
+  //checks if human is dead
+  public boolean isDead(){
+    return (_physHealth <= 0 || _mentalHealth <= 0);
+  }
 
-//checks if human is dead
-public boolean isDead(){
-  return (_physHealth <= 0 || _mentalHealth <= 0);
-}
+  //human dies
+  public void die(){
+    _physHealth = 0.0;
+    _mentalHealth = 0.0;
+    System.out.println(_name + " has died.");
+  }
 
-//human dies
-public void die(){
-  _physHealth = 0.0;
-  _mentalHealth = 0.0;
-  System.out.println(_name + " has died.");
-}
+  public void growUp(){_age += 0.5;}
 
-public void growUp(){_age += 0.5;}
+  public void sleep(){
+    System.out.println(this.getName() + " feels very sleepy and takes a long rest.");
+    System.out.println("His body is allowd to rest and gains +1.0 mental health");
+    _mentalHealth += 1.0;
+  }
 
-public void sleep(){
-  System.out.println(this.getName() + " feels very sleepy and takes a long rest.");
-  System.out.println("His body is allowd to rest and gains +1.0 mental health");
-  _mentalHealth += 1.0;
-}
+  public String toString(){
+    return "\nName: " + getName() +
+    "\nPhysical health: " + getPhysical() +
+    "\nMental health: " + getMental() +
+    "\nAge: " + getAge() +
+    "\nMoney: " + getMoney();
+  }
 
-public String toString(){
-  return "\nName: " + getName() +
-  "\nPhysical health: " + getPhysical() +
-  "\nMental health: " + getMental() +
-  "\nAge: " + getAge() +
-  "\nMoney: " + getMoney();
-}
+  public void getInjured() {
+    _physHealth -= 1.0;
+    System.out.println("Physical health decreased by 1.0 due to an injury");
+  }
 
-public void getInjured() {
-  _physHealth -= 1.0;
-  System.out.println("Physical health decreased by 1.0");
-}
+  public void sex(){
+    System.out.println("There isn't a condom in sight! Still want to have sex? (yes or no)");
+    String decision = Keyboard.readString();
+    double probability = Math.random();
+    switch(decision){
+      case "yes":
+      if(probability < 0.25){
+        System.out.println(getName() + "got texted the day after and developed no STDs!");
+      }
 
-/*public void change(Human obj){
-if(getAge() == 13){//Teen
-Human obj = new Teen(obj);
-}else if(getAge() == 19){//Adult
-// Human a = new Adult(a);
-System.out.println("adult to be worked on");
-}
-}*/
+      else if(probability < 0.5){
+        System.out.println("Did you not take health class?" + getName() + ".you got (disease l8r)");
+      }
 
-//***********ABSTRACT METHODS UNDER HERE ****************
+      else if(probability < 0.75){
+        System.out.println("Congratulations " + getName() + ". You're a teen parent now!");
+      }
 
-//public abstract void makeFriends();
-public abstract void workout();
+      else{
+        System.out.println("You're now a parent and you also got ");
+      }
+      break;
+      case "no":
+      System.out.println(getName() + " practiced self retraint! Stay safe!");
+      break;
+    }
+  }
 
-} //end class
+  public void doDrugs(){
+    System.out.println("Would you like to do a) cocaine b) fentanyl c) lsd");
+    String decision = Keyboard.readString();
+    switch(decision){
+      case "a":
+      System.out.println("Cocaine really stimulates " + this._name + " .... *jitters*");
+      _physHealth -= 1.0;
+      _mentalHealth -= 1.0;
+      break;
+      case "b":
+      System.out.println(this._name + " shouldnt have taken fentanyl....");
+      _physHealth = 0;
+      break;
+      case "c":
+      System.out.println(this._name + " prepares to experience enlightenment under the effects of lsd.");
+      _physHealth -= 0.3;
+      _mentalHealth += 0.3;
+      break;
+    }
+  }
+
+    public void dealDrugs(){
+      System.out.println("Would you like to sell a) cocaine b) fentanyl c) lsd");
+      String decision = Keyboard.readString();
+      switch(decision){
+        case "a":
+        _money += 50;
+        break;
+        case "b":
+        _money += 100;
+        break;
+        case "c":
+        _money += 20;
+        break;
+      }
+    }
+
+    public void withdrawal(){
+      System.out.println(this._name + " feels the pain of withdrawal symptoms... 'OWW MY HEAD'");
+      _mentalHealth -= 0.2;
+    }
+
+    //***********ABSTRACT METHODS UNDER HERE ****************
+
+    //public abstract void makeFriends();
+    public abstract void workout();
+
+
+  } //end class

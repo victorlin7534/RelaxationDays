@@ -15,7 +15,7 @@ public class Teen extends Human{
     _money = o._money;
   }
 
-/*  public void growUp(){
+  public void findFuture(){
     if(_age == 19){
       if(Math.random() > 0.5){
         _mentalHealth -= 2;
@@ -23,10 +23,8 @@ public class Teen extends Human{
       }else{
         _future = "working";
       }
-    }else{
-      _age++;
     }
-  }*/
+  }
 
   public void study(){
     _mentalHealth += 0.25;
@@ -45,34 +43,7 @@ public class Teen extends Human{
       _physHealth += 0.25;
     }
   }
-  //randomize STD l8r.
-  public void sex(){
-    System.out.println("There isn't a condom in sight! Still want to have sex? (yes or no)");
-    String decision = Keyboard.readString();
-    double probability = Math.random();
-    switch(decision){
-      case "yes":
-      if(probability < 0.25){
-        System.out.println(getName() + "got texted the day after and developed no STDs!");
-      }
 
-      else if(probability < 0.5){
-        System.out.println("Did you not take health class?" + getName() + ".you got (disease l8r)");
-      }
-
-      else if(probability < 0.75){
-        System.out.println("Congratulations " + getName() + ". You're a teen parent now!");
-      }
-
-      else{
-        System.out.println("You're now a parent and you also got ");
-      }
-      break;
-      case "no":
-      System.out.println(getName() + " practiced self retraint! Stay safe!");
-      break;
-    }
-  }
   /*  if(type.equals("unprotected")){
   System.out.println("");
   _money -= 250;
@@ -93,6 +64,10 @@ public void sleep(){
 }
 
 public void makeFriends(){
+
+}
+
+public void workout(){
 
 }
 }// end class Teen
