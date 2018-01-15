@@ -13,6 +13,7 @@ mini games will affect the human's life.
 Instruction to run program:
 
 1) Go to repo
-2) javac Woo.java
-3) java Woo
-4) Respond to the program's prompts and interact with the program.
+2) cd into the "Project_working" directory
+3) javac Woo.java
+4) java Woo
+5) Respond to the program's prompts and interact with the program.
