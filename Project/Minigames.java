@@ -4,6 +4,41 @@ import java.io.*;
 import java.util.*;
 
 public class Minigames{
+
+  public static boolean beatDeath(){
+    int count = 0;
+    long finish = 0;
+    System.out.println("-----------------------------------------------------------------------");
+    System.out.println("|Welcome to ---someone put a name here for this game------            |");
+    System.out.println("|In this game, the objective is to type in the letter k and press     |");
+    System.out.println("|enter as much as you can within the given time limit.                |");
+    System.out.println("|             Press any key and enter when you're ready!              |");
+    System.out.println("-----------------------------------------------------------------------");
+    String random100 = Keyboard.readString();
+    System.out.println("-----------------------------------------------------------------------");
+    System.out.println("                       Good Luck, Have Fun!                            \n");
+
+    System.out.println("-----------------------------------------------------------------------");
+    System.out.println("|Time Limit: 10 seconds                                               |");
+    /*start*/ long start = System.currentTimeMillis();
+    while( finish - start <= 10000 ){
+      String input = Keyboard.readString();
+      input = input.toLowerCase();
+      if(input.equals("k")){
+        count += 1;
+      }
+      finish = System.currentTimeMillis();
+    }
+
+    if(count > 30){
+      System.out.println("You Managed to Survive!\n");
+      return true;
+    } else {
+      System.out.println("You Died...\n");
+      return false;
+    }
+  }
+
   public static int test(File file,Human x){
     System.out.println("Surprise! It's a relaxation day! (that means test...)");
     int testScore = 0;
