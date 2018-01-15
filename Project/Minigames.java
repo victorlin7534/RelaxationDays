@@ -134,6 +134,9 @@ public class Minigames{
     SOP(grid[1][0] + " || " + grid[1][1] + " || " + grid[1][2]);
     SOP("=====================");
     SOP(grid[2][0] + " || " + grid[2][1] + " || " + grid[2][2]);
+    SOP("");
+    SOP("Choose your symbol (click on the number that coresponds with your choice)\n1. X\n2. O");
+    int choice = new Keyboard.readInt();
     return true;
   }
 
