@@ -32,7 +32,7 @@ public class Woo{
 
 public static void main(String []args){
   Minigames game = new Minigames();
-  game.Play();
+  game.TicTacToe();
   System.out.println("PUSH! PUSH!..... 'wah' .... 'wah' " + "\n");
 
   //Escaped string to facilitate compiling - Baby
