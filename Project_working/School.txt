@@ -1,0 +1,17 @@
+What is the name of a shape with three sides? a) square b) triangle c) circle
+b
+What is the solution to the equation 2x + 4 = 8? a) 0 b) 1 c) 2
+c
+How many letters are in the word "Mississippi"? a) 11 b)12 c)13
+a
+What is the worst case runtime for Selection Sort? a) O(log n) b) O(1) c) O(n^2)
+c
+What is the derivative of the equation x^2 + x + 1? a) x + 1 b) 2x+1 c) 2x + x
+b
+What year did Ghandi walk the Salt March? a) 1930 b) 1900 c) 1945
+a
+'Repeat after me children - A is for apple, B is for book, C is for cat...'
+'So kid, here is the multiplication table ... 1 * 2 = 2 .... 6 * 6 = 36'
+'Okay students, pour the water in the soil for the plant to grow.'
+'Wake up sleepy head or you'll fail in life!'
+'Pay attention so you dont fail the next test!'
