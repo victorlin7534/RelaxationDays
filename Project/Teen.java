@@ -6,6 +6,12 @@ public class Teen extends Human{
   private String _future;
   private int chance; //probability to obtain a significant other
 
+  //put it here so i can test woo
+  public void workout(){
+    System.out.println("This is some good  cadiovascular exercise for " + this.getName() + ". + 0.5 physical health");
+    _physHealth += 0.5;
+  }
+  
   //default constructor
   public Teen(Human o){
     _name = o._name;
