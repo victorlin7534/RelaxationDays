@@ -11,25 +11,30 @@ The Life of a Human
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -hierarchy/class structure
--
+-using life-stage specific METHODS
+-handling use of dialogue in Settings
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--
+-Death may occur but simulation doesn't stop until end of method.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--Reading a text file in java
+-How to read a text file in java
+-Pointers
+-You can have an ArrayList of HashMaps
+-Timing in java
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--
+-Removed interfaces
 
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Planning is very important
-Handling errors and flexibility
+Planning is very important.
+Incremental development is crucial.
+HashMaps are like dictionaries in Python.
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

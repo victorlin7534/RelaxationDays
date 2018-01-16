@@ -1,25 +1,27 @@
 RelaxationDays #3
 Daniel Gelfand, Victor Lin, Hasif Ahmed
-APCS1 pd2
+APCS pd2
 
 TO-DO LIST:
 
-1) Call life() in Woo while Human is alive. Comment out while in development stage.
+1) Loop while a Human is a alive - DONE
 
-2) Create the methods a Child will use.
+2) Create the methods a Child will use. - Done
 
-3) Update childYears in Human with Child methods to reflect a child's life.
+3) Create the methods a Teen will use. - Done
 
-4) Create the methods a Teen will use.
+4) Create the methods an Adult will use. - Done
 
-5) Update teenYears in Human with Teen methods to reflect a teen's life.
+5) Create settings to act out those methods. - Done
 
-6) Create minigames that handle certain events (ex: A party will have a "Just Dance" type game).
+6) Create minigames to make the simulation more interesting. - Done
 
-7) Write more dialogue that a human might need to used.
+7) Write dialogue for the Human that can be used in the setting. - Done
 
-8) Assign an Adult a job or homelessness based on his school performance and/or habits.
+8) Assign an Adult a job: - Done
 
-9) Create Adult specific METHODS.
+9) Run the Child stage of life in driver class Woo - Done
 
-10) Update adultYears in Human with Adult methods to reflect an adult's life.
+10) Run the Teen stage of life in Woo - Done
+
+11) Run Adult stage of life in Woo - Not Currently Done
