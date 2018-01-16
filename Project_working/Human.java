@@ -5,8 +5,6 @@ public abstract class Human{
 
   //instance variables
   protected String _name;
-  protected double _physHealthf; //old value
-  protected double _mentalHealthf; //old value
   protected double _physHealth; //Scale of 0 - 10 where 10 is peak physical health
   protected double _mentalHealth; //Scale of 0 - 10 where 10 is peak mental health
   protected int _money; //amount of money indicates class level
@@ -24,11 +22,7 @@ public abstract class Human{
 
   public double getPhysical(){return _physHealth;}
 
-  public double getPhysicalf(){return _physHealthf;}
-
   public double getMental(){return _mentalHealth;}
-
-  public double getMentalf(){return _mentalHealthf;}
 
 
   //******************MUTATORS**************************
@@ -63,8 +57,8 @@ public abstract class Human{
 
   public String toString(){
     return "\nName: " + getName() +
-    "\nPhysical health: " + getPhysicalf() + "->" + getPhysical() +
-    "\nMental health: " + getMentalf() + "->" + getMental() +
+    "\nPhysical health: " + getPhysical() +
+    "\nMental health: " + getMental() +
     "\nAge: " + getAge() +
     "\nMoney: " + getMoney();
   }
@@ -90,10 +84,13 @@ public abstract class Human{
 
       else if(probability < 0.75){
         System.out.println("Congratulations " + getName() + ". You're a parent now!");
+	_hasChild = true;
+	
       }
 
       else{
         System.out.println("You're now a parent and you also got STDs/ ");
+	_hasChild = true;
       }
       break;
       case "b":

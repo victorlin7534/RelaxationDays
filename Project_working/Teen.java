@@ -29,8 +29,6 @@ public class Teen extends Human{
   }*/
 
   public void study(){
-    _physHealthf = _physHealth;
-    _mentalHealthf = _mentalHealth;
     _mentalHealth += 0.25;
     _physHealth -= 0.25;
   }
@@ -39,14 +37,10 @@ public class Teen extends Human{
     if(Math.random() < 0.2){
       //injury
       System.out.println(_name + "needs to stop ego lifting! Grats on the injury.");
-      _physHealthf = _physHealth;
-      _mentalHealthf = _mentalHealth;
       _mentalHealth -= 2;
       _physHealth -= 2;
     }
     else{
-      _physHealthf = _physHealth;
-      _mentalHealthf = _mentalHealth;
       _mentalHealth += 0.05;
       _physHealth += 0.25;
     }
@@ -60,7 +54,6 @@ public void partTime(int hours){
 
 public void sleep(){
   System.out.println("*...snooze...*");
-  _mentalHealthf = _mentalHealth;
   _mentalHealth += 0.5;
 }
 
