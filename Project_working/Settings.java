@@ -178,7 +178,7 @@ public class Settings{
         System.out.println(x.getName() + " has some spare time to make cash. Work a little? a) yes b) no");
         String choice = Keyboard.readString();
         if(choice == "a"){
-          Teen.partTime(3,x);
+          ((Teen) x).partTime(3);
         }
 
       }
