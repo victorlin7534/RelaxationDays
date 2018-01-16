@@ -11,6 +11,7 @@ public abstract class Human{
   protected double _age;
   protected String _future;
   protected int _income;
+  protected boolean _hasChild;
 
   //*************ACCESSOR METHODS*********************
   public String getName(){return _name;}

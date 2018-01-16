@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Settings{
 
   public static int oneOf(int min, int max){
-    return min + (int) (Math.random() * (max - min) + 1);
+      return (int)(Math.random() * ((max - min) + 1)) + min;
   }
 
 
