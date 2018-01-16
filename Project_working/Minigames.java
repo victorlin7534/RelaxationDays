@@ -53,7 +53,7 @@ public class Minigames{
           }
           System.out.println("-----------------------------------------------------------------------");
           System.out.println("                                                                           /\"\"\"\"\"\r\n                                                                        |  (')')\r\n                                                                        C     _)\r\n                                                                        \\   _|\r\n                                                                        \\__/\r\n                                                                        <___Y>\r\n                                                                        /  \\ :\\\\\r\n                                                                       /   |  :|\\\r\n                                                                       |___|  :|/\\\r\n                                                                       | |   :|\\ \\\r\n                                                                       \\ \\   :| \\ \\_\r\n                                                                        \\ \\==L|   \\\\\\\r\n                                                                        ///` ||\r\n                                                                        |   ||\r\n                                                                        |   ||\r\n                                                                        |   ||\r\n                                                                        |   ||\r\n                                                                        |   ||\r\n                                                                        |   ||\r\n                                                                        [___]]\r\n                                                                        (____))\r\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-          System.out.println(x.getName() + "Won!");
+          System.out.println(x.getName() + " was able to follow the line!");
           System.out.println("-----------------------------------------------------------------------");
           return true;
 
@@ -166,12 +166,12 @@ public class Minigames{
     }
     if(lives > 0){
       System.out.println("-------------------------------------------------------------------\n" +
-      "Congragulations you won!\nThings seem to be looking up for you...\n" +
+      "Congragulations you won!\nThings seem to be looking up for" + x.getName() + "...\n" +
       "-------------------------------------------------------------------");
       return true;
     }else{
       System.out.println("-------------------------------------------------------------------\n" +
-      "Seems like you lost...\nThat will have consequences...\n" +
+      "Seems like you lost...\n" +
       "-------------------------------------------------------------------");
       return false;
     }

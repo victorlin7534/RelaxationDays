@@ -56,7 +56,7 @@ public class Settings{
     }
   }
 
-  public static Human atSchool(Human x){
+  public static boolean atSchool(Human x){
     System.out.println("__\r\n         \\_}\r\n        .-./--.\r\n       /# ^^   \\\r\n       |       |\r\n        \\     /\r\n         `\"`\"`\r\n ");
     boolean choice = false;
     File file = new File("School.txt");
@@ -74,13 +74,16 @@ public class Settings{
         case "a":
         System.out.println(talk(file,oneOf(13,15)));
         choice = true;
+        x.setMental(x.getMental() + 0.5);
         break;
         case "b":
         System.out.println(talk(file,oneOf(16,17)));
+        x.setMental(x.getMental() - 0.5);
+
       }
 
     }
-    return x;
+    return choice;
   } //end atSchool method
 
 
