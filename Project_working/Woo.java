@@ -51,7 +51,6 @@ public class Woo{
 
     System.out.println("Give the human a name: ");
     Human a = new Child(Keyboard.readString());
-
     //  Minigames.type(a);
     System.out.println(a._name + " undergoes a developmental period of his/her infant life.");
 
@@ -63,12 +62,9 @@ public class Woo{
 
     //Go to school at six years old
     a._age = 6.0;
-    //test
-    //Minigames.beatDeath(a);
     while(!a.isDead() && a.getAge() < 100){
       System.out.println(a);
       if(a.getAge() < 13){ //Child
-        a.setAge(13);
         System.out.println("\nWhat should " + a._name + " do today? a) school b) playground c) stay home");
         String act = Keyboard.readString();
         switch(act){
@@ -84,6 +80,11 @@ public class Woo{
 
           case "c":
           Settings.atHome(a);
+          break;
+
+          default:
+          Settings.atTrip(a);
+          break;
         }
       }
 

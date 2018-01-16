@@ -48,7 +48,7 @@ public abstract class Human{
     System.out.println(_name + " has died.");
   }
 
-  public void growUp(){_age += 0.5;}
+  public void growUp(){_age += 1.0;}
 
   public void sleep(){
     System.out.println(this.getName() + " feels very sleepy and takes a long rest.");
@@ -70,28 +70,28 @@ public abstract class Human{
   }
 
   public void sex(){
-    System.out.println("There isn't a condom in sight! Still want to have sex? (yes or no)");
+    System.out.println("There isn't a condom in sight! Still want to have sex? a) yes b) no");
     String decision = Keyboard.readString();
     double probability = Math.random();
     switch(decision){
-      case "yes":
+      case "a":
       if(probability < 0.25){
-        System.out.println(getName() + "got texted the day after and developed no STDs!");
+        System.out.println(getName() + " got tested the day after and developed no STDs!");
       }
 
       else if(probability < 0.5){
-        System.out.println("Did you not take health class?" + getName() + ".you got (disease l8r)");
+        System.out.println("Did you not take health class?" + getName() + ". You got an STD.");
       }
 
       else if(probability < 0.75){
-        System.out.println("Congratulations " + getName() + ". You're a teen parent now!");
+        System.out.println("Congratulations " + getName() + ". You're a parent now!");
       }
 
       else{
-        System.out.println("You're now a parent and you also got ");
+        System.out.println("You're now a parent and you also got STDs/ ");
       }
       break;
-      case "no":
+      case "b":
       System.out.println(getName() + " practiced self retraint! Stay safe!");
       break;
     }
@@ -103,15 +103,19 @@ public abstract class Human{
     switch(decision){
       case "a":
       System.out.println("Cocaine really stimulates " + this._name + " .... *jitters*");
+      System.out.println("Physical and Mental health -1.0");
       _physHealth -= 1.0;
       _mentalHealth -= 1.0;
+      _age += 0.5;
       break;
       case "b":
       System.out.println(this._name + " shouldnt have taken fentanyl....");
+      System.out.println("Physical health reduced to 0");
       _physHealth = 0;
       break;
       case "c":
       System.out.println(this._name + " prepares to experience enlightenment under the effects of lsd.");
+      System.out.println("Physical health -0.3 and Mental Health +0.3");
       _physHealth -= 0.3;
       _mentalHealth += 0.3;
       break;

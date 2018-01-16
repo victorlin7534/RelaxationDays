@@ -45,9 +45,9 @@ public class Teen extends Human{
   }
 
 public void partTime(int hours){
-  System.out.println(_name + " only does the job for the money.");
-  _mentalHealth -= 0.5;
-  _money += 7 * hours;
+  System.out.println(this._name + " likes to make money!");
+  this._mentalHealth -= 0.5;
+  this._money += 7 * hours;
 }
 
 public void sleep(){

@@ -3,12 +3,83 @@ import java.io.*;
 import java.util.*;
 
 public class Minigames{
+  public static boolean followLine(Human x){
+    System.out.println("-----------------------------------------------------------------------");
+    System.out.println("|Welcome to  ---Drunk Line Test----                                    |");
+    System.out.println("|In this game, the objective is to walk in a straight line. To be      |");
+    System.out.println("|able to walk straight you must type 'I am not drunk' into the terminal|");
+    System.out.println("|and hit enter each round (4 seconds each round). The rules are simple |");
+    System.out.println("|no punctuation, capitalization doesn't matter, and spaces do matter.  |");
+    System.out.println("|             Press any key and enter when you're ready!               |");
+    System.out.println("-----------------------------------------------------------------------");
+    String random1000 = Keyboard.readString();
+    System.out.println("-----------------------------------------------------------------------");
+    System.out.println("                       Good Luck, Have Fun!                            \n");
+    System.out.println("     /\"\"\"\"\"\r\n    |  (')')\r\n    C     _)\r\n     \\   _|\r\n      \\__/\r\n     <___Y>\r\n    /  \\ :\\\\\r\n   /   |  :|\\\r\n   |___|  :|/\\\r\n    | |   :|\\ \\\r\n    \\ \\   :| \\ \\_\r\n     \\ \\==L|  \\\\\\\r\n     ///` ||\r\n      |   ||\r\n      |   ||\r\n      |   ||\r\n      |   ||\r\n      |   ||\r\n      |   ||\r\n      [___]]\r\n      (____))\r\n ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n \r\n");
+    long start = System.currentTimeMillis();
+    String input = Keyboard.readString();
+    input = input.toLowerCase();
+    if(input.equals("i am not drunk")){
+      long finish = System.currentTimeMillis();
+      if( finish - start >= 4000){
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println(x.getName() + " was too slow and has fallen over...\nGame Over");
+        System.out.println("-----------------------------------------------------------------------");
+        return false;
+      }
+      System.out.println("                                /\"\"\"\"\"\r\n                                |  (')')\r\n                                C     _)\r\n                                \\   _|\r\n                                 \\__/\r\n                                <___Y>\r\n                                /  \\ :\\\\\r\n                                /   |  :|\\\r\n                                |___|  :|/\\\r\n                                | |   :|\\ \\\r\n                                \\ \\   :| \\ \\_\r\n                                \\ \\==L|  \\\\\\\r\n                                ///` ||\r\n                                 |   ||\r\n                                 |   ||\r\n                                 |   ||\r\n                                 |   ||\r\n                                 |   ||\r\n                                 |   ||\r\n                                 [___]]\r\n                                   (____))\r\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+      long start2 = System.currentTimeMillis();
+      String input2 = Keyboard.readString();
+      input2 = input2.toLowerCase();
+      if(input2.equals("i am not drunk")){
+        long finish2 = System.currentTimeMillis();
+        if( finish2 - start2 >= 4000){
+          System.out.println("-----------------------------------------------------------------------");
+          System.out.println(x.getName() + " was too slow and has fallen over...\nGame Over");
+          System.out.println("-----------------------------------------------------------------------");
+          return false;
+        }
+        System.out.println("                                                      /\"\"\"\"\"\r\n                                                      |  (')')\r\n                                                      C     _)\r\n                                                      \\   _|\r\n                                                      \\__/\r\n                                                      <___Y>\r\n                                                      /  \\ :\\\\\r\n                                                     /   |  :|\\\r\n                                                     |___|  :|/\\\r\n                                                     | |   :|\\ \\\r\n                                                     \\ \\   :| \\ \\_\r\n                                                      \\ \\==L|   \\\\\\\r\n                                                      ///` ||\r\n                                                      |   ||\r\n                                                      |   ||\r\n                                                      |   ||\r\n                                                      |   ||\r\n                                                      |   ||\r\n                                                      |   ||\r\n                                                      [___]]\r\n                                                      (____))\r\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ ");
+        long start3 = System.currentTimeMillis();
+        String input3 = Keyboard.readString();
+        input3 = input3.toLowerCase();
+        if(input3.equals("i am not drunk")){
+          long finish3 = System.currentTimeMillis();
+          if( finish3 - start3 >= 4000){
+            System.out.println("-----------------------------------------------------------------------");
+            System.out.println(x.getName() + " was too slow and has fallen over...\nGame Over");
+            System.out.println("-----------------------------------------------------------------------");
+            return false;
+          }
+          System.out.println("-----------------------------------------------------------------------");
+          System.out.println("                                                                           /\"\"\"\"\"\r\n                                                                        |  (')')\r\n                                                                        C     _)\r\n                                                                        \\   _|\r\n                                                                        \\__/\r\n                                                                        <___Y>\r\n                                                                        /  \\ :\\\\\r\n                                                                       /   |  :|\\\r\n                                                                       |___|  :|/\\\r\n                                                                       | |   :|\\ \\\r\n                                                                       \\ \\   :| \\ \\_\r\n                                                                        \\ \\==L|   \\\\\\\r\n                                                                        ///` ||\r\n                                                                        |   ||\r\n                                                                        |   ||\r\n                                                                        |   ||\r\n                                                                        |   ||\r\n                                                                        |   ||\r\n                                                                        |   ||\r\n                                                                        [___]]\r\n                                                                        (____))\r\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+          System.out.println(x.getName() + "Won!");
+          System.out.println("-----------------------------------------------------------------------");
+          return true;
 
-  public static boolean beatDeath(Human x){
+        }
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println("That's not right!\nSeems like" + x.getName() + "has fallen over...\nGame Over");
+        System.out.println("-----------------------------------------------------------------------");
+        return false;
+
+      }
+      System.out.println("-----------------------------------------------------------------------");
+    System.out.println("That's not right!\nSeems like" + x.getName() + "has fallen over...\nGame Over");
+      System.out.println("-----------------------------------------------------------------------");
+      return false;
+    }
+    System.out.println("-----------------------------------------------------------------------");
+    System.out.println("That's not right!\nSeems like" + x.getName() + "has fallen over...\nGame Over");
+    System.out.println("-----------------------------------------------------------------------");
+    return false;
+  }
+
+  public static boolean quickType(Human x){
     int count = 0;
     long finish = 0;
     System.out.println("-----------------------------------------------------------------------");
-    System.out.println("|Welcome to ---TYPE QUICK: A Game to Give Human A Second Chance-----            |");
+    System.out.println("|Welcome to ---Quick Type: A Struggle to Survive---                   |");
     System.out.println("|In this game, the objective is to type in the letter k and press     |");
     System.out.println("|enter as much as you can within the given time limit.                |");
     System.out.println("|             Press any key and enter when you're ready!              |");
@@ -30,10 +101,10 @@ public class Minigames{
     }
 
     if(count > 30){
-      System.out.println("You Managed to Survive!\n");
+      System.out.println(x.getName() + " Managed to Survive!\n");
       return true;
     } else {
-      System.out.println("You Died...\n");
+      System.out.println(x.getName() + " Died...\n");
       return false;
     }
   }
@@ -65,18 +136,18 @@ public class Minigames{
     String key = "";
     String[] temp = {"a","f","l","p","t"};
     System.out.println("-------------------------------------------------------------------\n" +
-                       "|Just Dance (Terminal Version)!                            Lives: " + lives + "|\n" +
-                       "|Just a minigame, may or may not have an effect on your life...     |\n" +
-                       "|The rules are simple: Type in the key you see in your terminal and |\n" +
-                       "|press enter to continue. There will be five rounds, and each round |\n" +
-                       "|is timed to 2 seconds. Also, you are given only 3 chances.         |\n" +
-                       "|                  Press any key to continue                        |\n");
+    "|Just Dance (Terminal Version)!                 Lives: " + lives + "|\n" +
+    "|Just a minigame, may or may not have an effect on your life...     |\n" +
+    "|The rules are simple: Type in the key you see in your terminal and |\n" +
+    "|press enter to continue. There will be five rounds, and each round |\n" +
+    "|is timed to 2 seconds. Also, you are given only 3 chances.         |\n" +
+    "|                  Press any key to continue                        |\n");
     String start = Keyboard.readString();
     System.out.println("                   Good luck and have fun!                           ");
     while(lives != 0 && count <= 5){
       long init = System.currentTimeMillis();
       System.out.println("-------------------------------------------------------------------\n" +
-                         "|Time:"+ init +"                                                    Lives:" + lives + "|");
+      "|Time:"+ init +"                                                    Lives:" + lives + "|");
       String word = temp[(int)(Math.random() * 4.01)];
       System.out.println(Woo.TYPE.get(word));
       long fin = System.currentTimeMillis();

@@ -12,10 +12,11 @@ public class Settings{
 
   public static void atParty(Human x){
     Minigames.type(x);
-    int lineNum = 1;
+    int action = oneOf(1,2);
+    int lineNum = oneOf(1,3);
     File file = new File("Party.txt");
 
-    if(x instanceof Teen){
+    if(action == 1){
       System.out.println(x.getName() + " is offered drugs. Take the offer? a) yes b) no");
       String choice = Keyboard.readString();
       switch(choice){
@@ -29,29 +30,30 @@ public class Settings{
       }
 
     }
+    else{
+      System.out.println(x.getName() + " is offered a drink. Take the offer? a) yes b) no");
+      String decision = Keyboard.readString();
 
-    System.out.println(x.getName() + " is offered a drink. Take the offer? a) yes b) no");
-    String decision = Keyboard.readString();
+      switch(decision){
+        case "a":
+        System.out.println("   .\r\n  .\r\n . .\r\n  ...\r\n\\~~~~~/\r\n \\   /\r\n  \\ /\r\n   V\r\n   |\r\n   |\r\n  ---");
+        System.out.println(talk(file,lineNum));
+        if(lineNum == 1) {
+          x.sex();
+        }
+        else{
+          x._physHealth -= 1.0;
+          x._mentalHealth -= 0.5;
+          Minigames.followLine(x);
 
-    switch(decision){
-      case "a":
-      System.out.println("   .\r\n  .\r\n . .\r\n  ...\r\n\\~~~~~/\r\n \\   /\r\n  \\ /\r\n   V\r\n   |\r\n   |\r\n  ---");
-      System.out.println(talk(file,lineNum));
-      if(lineNum == 1) {
-        x.sex();
+        }
+        break;
+        case "b":
+        System.out.println(x.getName() + "- 'I think im gonna leave...this isnt for me'");
+
       }
-      else{
-        x._physHealth -= 1.0;
-        x._mentalHealth -= 0.5;
-        //just dance game ehre
-      }
-      break;
-      case "b":
-      System.out.println(x.getName() + "- 'I think im gonna leave...this isnt for me'");
 
     }
-
-
   }
 
   public static Human atSchool(Human x){
@@ -100,10 +102,13 @@ public class Settings{
     switch(decision){
       case "a":
       System.out.println();
-      System.out.println("Off to the monkey bars!");
-      if(injuryProb > 0.75){
+      System.out.println("Off to the monkey bars! Try not to fall!");
+      if(!Minigames.quickType(x)){
         System.out.println("Shoot! "+ x.getName() + " fell off the monkey bars!");
         x.getInjured();
+      }
+      else{
+        System.out.println("Good job " + x.getName() + " for not falling!");
       }
       //add minigame-HERE
       break;
@@ -125,6 +130,33 @@ public class Settings{
     return x;
   }
 
+  public static void atTrip(Human x){
+    System.out.println(x.getName() + " has a trip to an amusement park!\n");
+    double prob = Math.random();
+    System.out.println("Should " + x.getName() + " ride a rollercoaster? a) yes b) no");
+
+    String decision = Keyboard.readString();
+    switch(decision){
+      case "a":
+      if(prob > 0.4){
+        System.out.println("\r\n +   __    ___                    /XXXXX\r\n |  /XX\\  /   \\        __        /XXXXXX\r\n | /XXXX\\(     )      /XX\\      /xXXXXXX\r\n |/XXXXXX\\\\___/__    /XXXX\\    /xXXXXXXX\r\n /XXXXXXXX\\__/XXX\\__/XXXXXX\\__/xXXXXXXXX");
+        System.out.println(x.getName() + " has a lot of fun. +0.5 mental health");
+        x.setMental(x.getMental() + 0.5);
+      }
+      else{
+        System.out.println("Jeez! " + x.getName() + " vomited.");
+        x.setMental(x.getMental() - 0.5);
+
+      }
+      break;
+      case "b":
+      System.out.println("Well that's not fun....");
+      break;
+    }
+
+
+  }
+
   public static void atHome(Human x){
     System.out.println(" \r\n    House\r\n     /\\-\\\r\n    _||\"|_\r\n    ");
     System.out.println(x.getName() + " stays at home that day.");
@@ -141,6 +173,19 @@ public class Settings{
 
       case "b":
       Minigames.TicTacToe();
+
+      if(x instanceof Teen){
+        System.out.println(x.getName() + " has some spare time to make cash. Work a little? a) yes b) no");
+        String choice = Keyboard.readString();
+        if(choice == "a"){
+          Teen.partTime(3,x);
+        }
+
+      }
+      break;
+
+
+
 
     }
 
