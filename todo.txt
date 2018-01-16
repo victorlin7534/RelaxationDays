@@ -18,7 +18,7 @@ TO-DO LIST:
 
 7) Write dialogue for the Human that can be used in the setting. - Done
 
-8) Assign an Adult a job: - Done
+8) Assign an Adult a job. - Done
 
 9) Run the Child stage of life in driver class Woo - Done
 
