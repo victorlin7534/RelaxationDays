@@ -9,7 +9,8 @@ public abstract class Human{
   protected double _mentalHealth; //Scale of 0 - 10 where 10 is peak mental health
   protected int _money; //amount of money indicates class level
   protected double _age;
-  protected ArrayList _friends;
+  protected String _future;
+  protected int _income;
 
   //*************ACCESSOR METHODS*********************
   public String getName(){return _name;}
@@ -22,14 +23,11 @@ public abstract class Human{
 
   public double getMental(){return _mentalHealth;}
 
-  public ArrayList<String> getFriends(){return _friends;}
 
   //******************MUTATORS**************************
   public void setAge(double a){_age = a;}
 
   public void setMoney(int m){_money = m;}
-
-  public void setFriend(String name){_friends.add(name);}
 
   public void setPhysical(double health){_physHealth = health;}
 

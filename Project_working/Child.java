@@ -9,6 +9,8 @@ public class Child extends Human implements Nerd,Athlete{
     _mentalHealth = 10.0;
     _money = 0;
     _age = 0;
+    _future = "";
+    _income = 0;
   }
 
   //overloaded constructor with name as a parameter

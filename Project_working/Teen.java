@@ -3,8 +3,8 @@ import cs1.Keyboard;
 
 public class Teen extends Human{
   //instance variables
-  private String _future;
-  private int chance; //probability to obtain a significant other
+
+  //private int chance; //probability to obtain a significant other
 
   //default constructor
   public Teen(Human o){
@@ -13,10 +13,12 @@ public class Teen extends Human{
     _mentalHealth = o._mentalHealth;
     _age = o._age;
     _money = o._money;
+    _future = "";
+    _income = 0;
   }
 
-  public void findFuture(){
-    if(_age == 19){
+  /*public void findFuture(){
+    if(_age == 18){
       if(Math.random() > 0.5){
         _mentalHealth -= 2;
         _future = "college";
@@ -24,7 +26,7 @@ public class Teen extends Human{
         _future = "working";
       }
     }
-  }
+  }*/
 
   public void study(){
     _mentalHealth += 0.25;

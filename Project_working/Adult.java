@@ -1,6 +1,6 @@
 public class Adult extends Human{
 
-private int _income;
+
 
   public Adult(Human o){
     _name = o._name;
@@ -8,7 +8,9 @@ private int _income;
     _mentalHealth = o._mentalHealth;
     _age = o._age;
     _money = o._money;
-    _income = 70000;
+    _income = o._income;
+    _future  =  o._future;
+
   }
 
   public void payBills(){

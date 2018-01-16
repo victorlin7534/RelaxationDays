@@ -63,7 +63,7 @@ public class Settings{
 
     //Chance of having a relaxation day
     if(Math.random() < 0.35){
-      System.out.println("You scored a: " + Minigames.test(file,x) + "on the test");
+      System.out.println("You scored a: " + Minigames.test(file,x) + " on the test");
     }
     else{
       System.out.println("Should " + x.getName() + " pay attention? a) yes b) no");
@@ -97,7 +97,7 @@ public class Settings{
     double injuryProb = Math.random();
 
 
-    System.out.println("Should " + x.getName() + " play ... a) monkey bars b) sports");
+    System.out.println("Should " + x.getName() + " play ... a) monkey bars b) sports c) make friends");
     String decision = Keyboard.readString();
     switch(decision){
       case "a":
@@ -110,12 +110,12 @@ public class Settings{
       else{
         System.out.println("Good job " + x.getName() + " for not falling!");
       }
-      //add minigame-HERE
       break;
 
       case "b":
       System.out.println();
       System.out.println("Off to the the sports field!");
+      System.out.println("                    ___\r\n o__        o__     |   |\\\r\n/|          /\\      |   |X\\\r\n/ > o        <\\     |   |XX\\");
       if(injuryProb > 0.75){
         System.out.println("Shoot! "+ x.getName() + " slipped and is now bruised.");
         x.getInjured();
@@ -124,6 +124,8 @@ public class Settings{
         //add minigame here
         x.workout();
       }
+
+      case "c":
 
 
     }
