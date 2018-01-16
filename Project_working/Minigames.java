@@ -188,6 +188,7 @@ public class Minigames{
     int counter2 = 1;
     int pos;
     int posfinal;
+    //int firstopp = 0;
 
 
     System.out.println("-----------------------------------------------------------------------");
@@ -282,35 +283,35 @@ public class Minigames{
         selection [2][choosing - 7] = " ";
         possible.set(choosing - 1,0);
       }
-      if(grid[0][0].equals("  X  ") && grid[0][1].equals("  X  ") && grid[0][2].equals("  X  " )){
+      if(grid[0][0].equals("  " + symbol + "  ") && grid[0][1].equals("  "+ symbol + "  ") && grid[0][2].equals("  " + symbol + "  ")){
         win = true;
         winner = "me";
         break;
-      } else if(grid[1][0].equals("  X  ") && grid[1][1].equals("  X  ") && grid[2][1].equals("  X  ")){
+      } else if(grid[1][0].equals("  " + symbol + "  ") && grid[1][1].equals("  " + symbol + "  ") && grid[1][2].equals("  " + symbol + "  ")){
         win = true;
         winner = "me";
         break;
-      } else if(grid[2][0].equals("  X  ") && grid[2][1].equals("  X  ") && grid[2][2].equals("  X  ")){
+      } else if(grid[2][0].equals("  " + symbol + "  ") && grid[2][1].equals("  " + symbol + "  ") && grid[2][2].equals("  " + symbol + "  ")){
         win = true;
         winner = "me";
         break;
-      } else if(grid[0][0].equals("  X  ") && grid[1][0].equals("  X  ") && grid[2][0].equals("  X  ") ){
+      } else if(grid[0][0].equals("  " + symbol + "  ") && grid[1][0].equals("  " + symbol + "  ") && grid[2][0].equals("  " + symbol + "  ") ){
         win = true;
         winner = "me";
         break;
-      } else if(grid[0][1].equals("  X  ") && grid[1][1].equals("  X  ") && grid[2][1].equals("  X  ") ){
+      } else if(grid[0][1].equals("  " + symbol + "  ") && grid[1][1].equals("  " + symbol + "  ") && grid[2][1].equals("  " + symbol + "  ") ){
         win = true;
         winner = "me";
         break;
-      } else if(grid[0][2].equals("  X  ") && grid[1][2].equals("  X  ") && grid[2][2].equals("  X  ")){
+      } else if(grid[0][2].equals("  " + symbol + "  ") && grid[1][2].equals("  " + symbol + "  ") && grid[2][2].equals("  " + symbol + "  ")){
         win = true;
         winner = "me";
         break;
-      } else if(grid[0][0].equals("  X  ") && grid[1][1].equals("  X  ") && grid[2][2].equals("  X  ") ){
+      } else if(grid[0][0].equals("  " + symbol + "  ") && grid[1][1].equals("  " + symbol + "  ") && grid[2][2].equals("  " + symbol + "  ") ){
         win = true;
         winner = "me";
         break;
-      } else if(grid[0][2].equals("  X  ") && grid[1][1].equals("  X  ") && grid[2][0].equals("  X  ") ){
+      } else if(grid[0][2].equals("  " + symbol + "  ") && grid[1][1].equals("  " + symbol + "  ") && grid[2][0].equals("  " + symbol + "  ") ){
         win = true;
         winner = "me";
         break;
@@ -326,6 +327,13 @@ public class Minigames{
         winner = "tie";
         win = true;
       }
+      /*if( firstopp == 0 ){
+        for(int y = 0; y < 3; y++){
+          if(grid[1][y].equals("empty")){
+            grid[1][y] == "  " + symbol2 + "  ";
+          }
+        }
+      }*/
       pos = (int) (Math.random() * (cpu.size() - 1) );
       posfinal = cpu.get(pos);
       if( posfinal <= 3){
@@ -342,35 +350,35 @@ public class Minigames{
         possible.set(posfinal - 1,0);
       }
 
-      if(grid[0][0].equals("  O  ") && grid[0][1].equals("  O  ") && grid[0][2].equals("  O  " )){
+      if(grid[0][0].equals("  " + symbol2 + "  ") && grid[0][1].equals("  " + symbol2 + "  ") && grid[0][2].equals("  " + symbol2 + "  ")){
         win = true;
         winner = "not";
         break;
-      } else if(grid[1][0].equals("  O  ") && grid[1][1].equals("  O  ") && grid[2][1].equals("  O  ")){
+      } else if(grid[1][0].equals("  " + symbol2 + "  ") && grid[1][1].equals("  " + symbol2 + "  ") && grid[1][2].equals("  " + symbol2 + "  ")){
         win = true;
         winner = "not";
         break;
-      } else if(grid[2][0].equals("  O  ") && grid[2][1].equals("  O  ") && grid[2][2].equals("  O  ")){
+      } else if(grid[2][0].equals("  " + symbol2 + "  ") && grid[2][1].equals("  " + symbol2 + "  ") && grid[2][2].equals("  " + symbol2 + "  ")){
         win = true;
         winner = "not";
         break;
-      } else if(grid[0][0].equals("  O  ") && grid[1][0].equals("  O  ") && grid[2][0].equals("  O  ") ){
+      } else if(grid[0][0].equals("  " + symbol2 + "  ") && grid[1][0].equals("  " + symbol2 + "  ") && grid[2][0].equals("  " + symbol2 + "  ") ){
         win = true;
         winner = "not";
         break;
-      } else if(grid[0][1].equals("  O  ") && grid[1][1].equals("  O  ") && grid[2][1].equals("  O  ") ){
+      } else if(grid[0][1].equals("  " + symbol2 + "  ") && grid[1][1].equals("  " + symbol2 + "  ") && grid[2][1].equals("  " + symbol2 + "  ") ){
         win = true;
         winner = "not";
         break;
-      } else if(grid[0][2].equals("  O  ") && grid[1][2].equals("  O  ") && grid[2][2].equals("  O  ")){
+      } else if(grid[0][2].equals("  " + symbol2 + "  ") && grid[1][2].equals("  " + symbol2 + "  ") && grid[2][2].equals("  " + symbol2 + "  ")){
         win = true;
         winner = "not";
         break;
-      } else if(grid[0][0].equals("  O  ") && grid[1][1].equals("  O  ") && grid[2][2].equals("  O  ") ){
+      } else if(grid[0][0].equals("  " + symbol2 + "  ") && grid[1][1].equals("  " + symbol2 + "  ") && grid[2][2].equals("  " + symbol2 + "  ") ){
         win = true;
         winner = "not";
         break;
-      } else if(grid[0][2].equals("  O  ") && grid[1][1].equals("  O  ") && grid[2][0].equals("  O  ") ){
+      } else if(grid[0][2].equals("  " + symbol2 + "  ") && grid[1][1].equals("  " + symbol2 + "  ") && grid[2][0].equals("  " + symbol2 + "  ") ){
         win = true;
         winner = "not";
         break;
