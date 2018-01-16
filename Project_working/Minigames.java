@@ -10,7 +10,7 @@ public class Minigames{
     System.out.println("|able to walk straight you must type 'I am not drunk' into the terminal|");
     System.out.println("|and hit enter each round (4 seconds each round). The rules are simple |");
     System.out.println("|no punctuation, capitalization doesn't matter, and spaces do matter.  |");
-    System.out.println("|             Press any key and enter when you're ready!               |");
+    System.out.println("|             Press any letter and hit enter when you're ready!        |");
     System.out.println("-----------------------------------------------------------------------");
     String random1000 = Keyboard.readString();
     System.out.println("-----------------------------------------------------------------------");
@@ -82,7 +82,7 @@ public class Minigames{
     System.out.println("|Welcome to ---Quick Type: A Struggle to Survive---                   |");
     System.out.println("|In this game, the objective is to type in the letter k and press     |");
     System.out.println("|enter as much as you can within the given time limit.                |");
-    System.out.println("|             Press any key and enter when you're ready!              |");
+    System.out.println("|             Press any letter and hit enter when you're ready!       |");
     System.out.println("-----------------------------------------------------------------------");
     String random100 = Keyboard.readString();
     System.out.println("-----------------------------------------------------------------------");
@@ -141,7 +141,7 @@ public class Minigames{
     "|The rules are simple: Type in the key you see in your terminal and |\n" +
     "|press enter to continue. There will be five rounds, and each round |\n" +
     "|is timed to 2 seconds. Also, you are given only 3 chances.         |\n" +
-    "|                  Press any key to continue                        |\n");
+    "|             Press any letter and hit enter when you're ready!     |");
     String start = Keyboard.readString();
     System.out.println("                   Good luck and have fun!                           ");
     while(lives != 0 && count <= 5){
@@ -249,7 +249,7 @@ public class Minigames{
     }
 
 
-    System.out.println("         Press any key when you're ready to play!           ");
+    System.out.println("         Press any letter and hit enter when you're ready!        ");
     String random10 = Keyboard.readString();
     System.out.println("               Good Luck, Have Fun!                             ");
 

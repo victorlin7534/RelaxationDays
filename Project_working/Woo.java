@@ -39,7 +39,9 @@ public class Woo{
     System.out.println();
 
     System.out.println("Give the human a name: ");
+    System.out.println("------------------------------------------------------");
     Human a = new Child(Keyboard.readString());
+    System.out.println("------------------------------------------------------");
 
     //  Minigames.type(a);
     System.out.println(a._name + " undergoes a developmental period of his/her infant life.");
@@ -57,9 +59,17 @@ public class Woo{
     while(!a.isDead() && a.getAge() < 100){
       System.out.println(a);
       if(a.getAge() < 13){ //Child
-        System.out.println(a);
+
         System.out.println("\nWhat should " + a._name + " do today? a) school b) playground c) stay home");
+        System.out.println("------------------------------------------------------");
         String act = Keyboard.readString();
+        System.out.println("------------------------------------------------------");
+        if( !(act.equals("a") || act.equals("b") || act.equals("c"))){
+          System.out.println("That's not a valid input...\nIf you mess up again you go on a trip.");
+          System.out.println("------------------------------------------------------");
+          act = Keyboard.readString();
+          System.out.println("------------------------------------------------------");
+        }
         switch(act){
 
           case "a":
@@ -76,6 +86,7 @@ public class Woo{
           break;
 
           default:
+          System.out.println("Guess " + a._name + " is going on a trip...");
           Settings.atTrip(a);
           break;
         }
@@ -88,7 +99,15 @@ public class Woo{
         //  a.partTime();
 
         System.out.println("\nWhat should " + a._name + " do today? a) school b) party c) stay home");
+        System.out.println("------------------------------------------------------");
         String act = Keyboard.readString();
+        System.out.println("------------------------------------------------------");
+        if( !(act.equals("a") || act.equals("b") || act.equals("c"))){
+          System.out.println("That's not a valid input...\nIf you mess up again you have to stay home.");
+          System.out.println("------------------------------------------------------");
+          act = Keyboard.readString();
+          System.out.println("------------------------------------------------------");
+        }
         ((Teen) a).partTime(3);
         switch(act){
           case "a":
@@ -102,14 +121,23 @@ public class Woo{
           case "c":
           Settings.atHome(a);
           break;
+
+          default:
+          System.out.println("Guess " + a._name + " is staying home...");
+          Settings.atHome(a);
+          break;
         }
       }
       else if(a._age == 18){
         System.out.println("What is " + a._name+   "'s future job?");
+        System.out.println("------------------------------------------------------");
         String job = Keyboard.readString();
+        System.out.println("------------------------------------------------------");
         a._future = job;
         System.out.println("What is the average income for such a job?");
+        System.out.println("------------------------------------------------------");
         int salary = Keyboard.readInt();
+        System.out.println("------------------------------------------------------");
         a._income = salary;
 
       }
