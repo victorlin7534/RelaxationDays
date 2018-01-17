@@ -10,6 +10,10 @@ What is the derivative of the equation x^2 + x + 1? a) x + 1 b) 2x+1 c) 2x + x
 b
 What year did Ghandi walk the Salt March? a) 1930 b) 1900 c) 1945
 a
+Injury to the human amygdala impairs recognition of what facial expression? a) fear b) sadness c) happiness
+a
+If it is observed that, in a particular market, price has risen and quantity exchanged has increased, it is likely that: a) supply decreased b) demand increased c) demand decreased
+b
 'Repeat after me children - A is for apple, B is for book, C is for cat...'
 'So kid, here is the multiplication table ... 1 * 2 = 2 .... 6 * 6 = 36'
 'Okay students, pour the water in the soil for the plant to grow.'

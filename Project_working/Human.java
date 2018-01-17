@@ -27,11 +27,7 @@ public abstract class Human{
 
   public double getPhysical(){return _physHealth;}
 
-  public double getPhysicalf(){return _physHealthf;}
-
   public double getMental(){return _mentalHealth;}
-
-  public double getMentalf(){return _mentalHealthf;}
 
 
   //******************MUTATORS**************************
@@ -104,10 +100,13 @@ public abstract class Human{
 
       else if(probability < 0.75){
         System.out.println("Congratulations " + getName() + ". You're a parent now!");
+	_hasChild = true;
+
       }
 
       else{
         System.out.println("You're now a parent and you also got STDs/ ");
+	_hasChild = true;
       }
       break;
       case "b":
