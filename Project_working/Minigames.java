@@ -380,11 +380,11 @@ public class Minigames{
       finish = System.currentTimeMillis();
     }
 
-    if(count > 30){
-      System.out.println(x.getName() + " Managed to Survive!\n");
+    if(count > 25){
+      System.out.println(x.getName() + " Won!\n");
       return true;
     } else {
-      System.out.println(x.getName() + " Died...\n");
+      System.out.println(x.getName() + " lost...\n");
       return false;
     }
   }
@@ -568,7 +568,7 @@ public class Minigames{
       System.out.println("=====================");
       System.out.println("  " + selection[2][0] + "  " + " ||  " + selection[2][1] + "  || " + "  " + selection[2][2] + "  ");
       int choosing = Keyboard.readInt();
-      
+
       if( choosing <= 3){
         grid[0][choosing - 1] = "  " + symbol + "  ";
         selection[0][choosing - 1] = " ";

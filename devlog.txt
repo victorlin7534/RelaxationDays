@@ -19,6 +19,7 @@ UNRESOLVED ISSUES
 -Death may occur but simulation doesn't stop until end of method.
 -User can just use arrow up key to cheat minigames.
 -Have to hit enter for quickType minigame to finish.
+-Bug in TicTacToe where user can choose a spot already chosen, and if they do so, they're turn is skipped
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

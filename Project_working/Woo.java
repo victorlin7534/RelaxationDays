@@ -120,18 +120,21 @@ public class Woo{
       		    Settings.atHome(a);
       		    break;
       		}
-      	    }
-      	    else if(a._age == 18){
-      		if(!a._hasChild){
-      		    System.out.println("What is " + a._name+   "'s future job?");
-      		    String job = Keyboard.readString();
-      		    a._future = job;
-      		    System.out.println("What is the average income for such a job? (be realistic)");
-      		    int salary = Keyboard.readInt();
-      		    a._income = salary;
-      		}else{
-      		    a._future = "Laborer";
-      		    a._income = 40000;
+        }
+        else if(a._age == 18){
+          if(!a._hasChild){
+            System.out.println("What is " + a._name+   "'s future job?");
+            String job;
+
+            job = Keyboard.readString();
+
+            a._future = job;
+            System.out.println("What is the average income for such a job? (be realistic)");
+            int salary = Keyboard.readInt();
+            a._income = salary;
+          }else{
+            a._future = "Laborer";
+            a._income = 40000;
       		}
 
       	    }
