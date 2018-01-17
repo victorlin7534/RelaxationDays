@@ -75,20 +75,21 @@ public abstract class Human{
   }
 //overwritten toString. Displays changes
   public String toString(){
-    if(getPhysicalf() == getPhysical() && getMentalf() == getMental() && getMoneyf() == getMoney()){
+    if(getPhysicalf() == getPhysical() && getMentalf() == getMental() && getMoneyf() == getMoney() && _sickTypef.equals(_sickType)){
       return "\nName: " + getName() +
       "\nPhysical health: " + getPhysical() +
       "\nMental health: " + getMental() +
       "\nAge: " + getAge() +
       "\nMoney: " + getMoney() +
       "\nSickness: " + _sickType;
+    }else{
+      return "\nName: " + getName() +
+      "\nPhysical health: " + getPhysicalf() + " -> " + getPhysical() +
+      "\nMental health: " + getMentalf() + " -> " + getMental() +
+      "\nAge: " + getAge() +
+      "\nMoney: " + getMoneyf() + " -> " + getMoney() +
+      "\nSickness: " + _sickTypef + " -> " + _sickType;
     }
-    return "\nName: " + getName() +
-    "\nPhysical health: " + getPhysicalf() + " -> " + getPhysical() +
-    "\nMental health: " + getMentalf() + " -> " + getMental() +
-    "\nAge: " + getAge() +
-    "\nMoney: " + getMoneyf() + " -> " + getMoney() +
-    "\nSickness: " + _sickTypef + " -> " + _sickType;
   }
 
 //Decrease physical health due to injury

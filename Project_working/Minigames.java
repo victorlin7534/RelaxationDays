@@ -3,6 +3,7 @@ import java.io.*;
 import java.util.*;
 
 public class Minigames{
+  //Work minigame
   public static boolean work1(Human x){
     System.out.println("-----------------------------------------------------------------------");
     System.out.println("|Welcome to  ---- The Working Game: Type Out the Work Song! ----       |");
@@ -33,11 +34,11 @@ public class Minigames{
       System.out.println("                         Good Luck, Have Fun                           ");
       System.out.println("-----------------------------------------------------------------------");
       System.out.println("|Round 1|");
-      System.out.println("Work, work, work, work, work, work");
+      System.out.println("Work work work work work work");
       long start = System.currentTimeMillis();
       String readthis = Keyboard.readString();
       readthis = readthis.toLowerCase();
-      if(readthis.equals("Work, work, work, work, work, work")){
+      if(readthis.equals("work work work work work work")){
         long finish = System.currentTimeMillis();
         if( finish - start >= 2000){
           System.out.println("-----------------------------------------------------------------------");
@@ -58,7 +59,7 @@ public class Minigames{
           start = System.currentTimeMillis();
           readthis = Keyboard.readString();
           readthis = readthis.toLowerCase();
-          if(readthis.equals("He said me haffi")){
+          if(readthis.equals("he said me haffi")){
             finish = System.currentTimeMillis();
             if( finish - start >= 2000){
               System.out.println("-----------------------------------------------------------------------");
@@ -75,11 +76,11 @@ public class Minigames{
 
               System.out.println("-----------------------------------------------------------------------");
               System.out.println("|Round 3|");
-              System.out.println("Work, work, work, work, work, work");
+              System.out.println("Work work work work work work");
               start = System.currentTimeMillis();
               readthis = Keyboard.readString();
               readthis = readthis.toLowerCase();
-              if(readthis.equals("Work, work, work, work, work, work")){
+              if(readthis.equals("work work work work work work")){
                 finish = System.currentTimeMillis();
                 if( finish - start >= 2000){
                   System.out.println("-----------------------------------------------------------------------");
@@ -100,7 +101,7 @@ public class Minigames{
                   start = System.currentTimeMillis();
                   readthis = Keyboard.readString();
                   readthis = readthis.toLowerCase();
-                  if(readthis.equals("He see me do mi")){
+                  if(readthis.equals("he see me do mi")){
                     finish = System.currentTimeMillis();
                     if( finish - start >= 2000){
                       System.out.println("-----------------------------------------------------------------------");
@@ -158,11 +159,11 @@ public class Minigames{
       System.out.println("                         Good Luck, Have Fun                           ");
       System.out.println("-----------------------------------------------------------------------");
       System.out.println("|Round 1|");
-      System.out.println("I'm ready");
+      System.out.println("Im ready");
       long start = System.currentTimeMillis();
       String readthis = Keyboard.readString();
       readthis = readthis.toLowerCase();
-      if(readthis.equals("I'm ready")){
+      if(readthis.equals("im ready")){
         long finish = System.currentTimeMillis();
         if( finish - start >= 2000){
           System.out.println("-----------------------------------------------------------------------");
@@ -179,11 +180,11 @@ public class Minigames{
           x.setMental(x.getMental() + 0.25);
           System.out.println("-----------------------------------------------------------------------");
           System.out.println("|Round 2|");
-          System.out.println("I'm ready");
+          System.out.println("Im ready");
           start = System.currentTimeMillis();
           readthis = Keyboard.readString();
           readthis = readthis.toLowerCase();
-          if(readthis.equals("I'm ready")){
+          if(readthis.equals("im ready")){
             finish = System.currentTimeMillis();
             if( finish - start >= 2000){
               System.out.println("-----------------------------------------------------------------------");
@@ -200,11 +201,11 @@ public class Minigames{
 
               System.out.println("-----------------------------------------------------------------------");
               System.out.println("|Round 3|");
-              System.out.println("To go to work!");
+              System.out.println("To go to work");
               start = System.currentTimeMillis();
               readthis = Keyboard.readString();
               readthis = readthis.toLowerCase();
-              if(readthis.equals("To go to work!")){
+              if(readthis.equals("to go to work")){
                 finish = System.currentTimeMillis();
                 if( finish - start >= 2000){
                   System.out.println("-----------------------------------------------------------------------");
@@ -221,11 +222,11 @@ public class Minigames{
                   x.setMental(x.getMental() + 0.25);
                   System.out.println("-----------------------------------------------------------------------");
                   System.out.println("|Round 4|");
-                  System.out.println("Hello, Krusty Krab!");
+                  System.out.println("Hello Krusty Krab");
                   start = System.currentTimeMillis();
                   readthis = Keyboard.readString();
                   readthis = readthis.toLowerCase();
-                  if(readthis.equals("Hello, Krusty Krab!")){
+                  if(readthis.equals("hello krusty krab")){
                     finish = System.currentTimeMillis();
                     if( finish - start >= 2000){
                       System.out.println("-----------------------------------------------------------------------");
@@ -281,7 +282,7 @@ public class Minigames{
   }
 
 
-
+  //"I am not drunk" to stay on the line
   public static boolean followLine(Human x){
     System.out.println("-----------------------------------------------------------------------");
     System.out.println("|Welcome to  ---Drunk Line Test----                                    |");
@@ -391,6 +392,7 @@ public class Minigames{
 
 
   public static int test(File file,Human x){
+    //get an odd line number for the question
     int lineChild = Settings.oneOf(1,11);
     if(lineChild % 2 == 0){lineChild+=1;}
     int lineTeen = Settings.oneOf(13,23);
@@ -400,6 +402,7 @@ public class Minigames{
     System.out.println("Surprise! It's a relaxation day! (that means test...)");
     int testScore = 0;
 
+    //seperate questions for different life stages
     if(x instanceof Child){
       for(int i=lineChild;i< lineChild + 3;i+=2){
         System.out.println(Settings.talk(file,i));

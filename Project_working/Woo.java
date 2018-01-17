@@ -71,6 +71,8 @@ public class Woo{
     	a._age = 6.0;
 
     	// a._age = 14.0; used for teen testing purposes :)
+
+      //Simulate life
     	while(!a.isDead() && a.getAge() < 31){
     	    if(a.getAge() < 13){ //Child
     		System.out.println(a);
@@ -105,7 +107,6 @@ public class Woo{
 
     		System.out.println("\nWhat should " + a._name + " do today? a) school b) party c) stay home");
     		String act = Keyboard.readString();
-    		((Teen) a).partTime(3);
     		switch(act){
     		case "a":
     		    Settings.atSchool(a);
@@ -159,9 +160,12 @@ public class Woo{
 
     		case "c":
     		    Settings.atSchool(a);
+            a.setMoney(a.getMoney() - 20000);
     		    break;
     		}
-    	    }
+        ((Adult)a).payBills();
+        ((Adult)a).payTaxes();
+    	 }
           if(a._physHealth == 1 || a._mentalHealth == 1){
             Settings.atHospital(a);
           }
