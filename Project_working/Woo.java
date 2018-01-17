@@ -72,7 +72,6 @@ public class Woo{
 
     	// a._age = 14.0; used for teen testing purposes :)
     	while(!a.isDead() && a.getAge() < 31){
-    	    System.out.println(a);
     	    if(a.getAge() < 13){ //Child
     		System.out.println(a);
     		System.out.println("\nWhat should " + a._name + " do today? a) school b) playground c) stay home");
