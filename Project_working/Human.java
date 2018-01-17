@@ -27,7 +27,11 @@ public abstract class Human{
 
   public double getPhysical(){return _physHealth;}
 
+  public double getPhysicalf(){return _physHealthf;};
+
   public double getMental(){return _mentalHealth;}
+
+  public double getMentalf(){return _mentalHealthf;};
 
 
   //******************MUTATORS**************************

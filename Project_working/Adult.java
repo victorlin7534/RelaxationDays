@@ -34,6 +34,6 @@ public void workout(){
     public void childCare(){
 	System.out.println("Children are expensive these days!");
 	_mentalHealth -= 0.5;
-	_physicalHealth -= 0.5;
+	_physHealth -= 0.5;
     }
 }//end class

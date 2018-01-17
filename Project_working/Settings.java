@@ -205,11 +205,11 @@ public class Settings{
 	}else{
 	    x.setMoney(x.getMoney() + x._income/2);
 	}
-	x.setPhys(x.getPhys() - 0.5);
+	x.setPhysical(x.getPhysical() - 0.5);
 	x.setMental(x.getMental() - 0.5);
     }
 
-    
+
     public static String talk(File a, int lineNum){
 	try {
 	    //Create a new Scanner object which will read the data from the file passed in.
