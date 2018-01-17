@@ -22,14 +22,14 @@ public class Woo{
         stdArray.add("Syphilis");
         stdArray.add("Chlamidya");
     	BIRTH = new HashMap<String,Double>(3);
-      	BIRTH.put("Down",0.25);
-      	BIRTH.put("CongenitalHeart",0.1);
+      	BIRTH.put("Down",0.4);
+      	BIRTH.put("CongenitalHeart",0.5);
       	BIRTH.put("PKU",0.75);
         birthArray.add("Down");
         birthArray.add("CongenitalHeart");
         birthArray.add("PKU");
     	RANDOM = new HashMap<String,Double>(3);
-      	RANDOM.put("Flu",0.1);
+      	RANDOM.put("Flu",0.2);
       	RANDOM.put("Cancer",1.0);
       	RANDOM.put("pneumonia",0.5);
         randomArray.add("Flu");
