@@ -8,8 +8,8 @@ public abstract class Human{
   protected double _physHealthf; //old value
   protected double _mentalHealthf; //old value
   protected int _moneyf; //old value
-  protected double _physHealth; //Scale of 0 - 10 where 10 is peak physical health
-  protected double _mentalHealth; //Scale of 0 - 10 where 10 is peak mental health
+  protected double _physHealth; //Determines life or death
+  protected double _mentalHealth; //Determines life or death
   protected int _money; //amount of money indicates class level
   protected double _age;
   protected String _future;
@@ -71,21 +71,21 @@ public abstract class Human{
   public void sleep(){
     System.out.println(this.getName() + " feels very sleepy and takes a long rest.");
     System.out.println("His body is allowd to rest and gains +1.0 mental health");
-    _mentalHealth += 1.0;
+    _mentalHealth += 0.5;
   }
 //overwritten toString. Displays changes
   public String toString(){
     if(getPhysicalf() == getPhysical() && getMentalf() == getMental() && getMoneyf() == getMoney() && _sickTypef.equals(_sickType)){
       return "\nName: " + getName() +
-      "\nPhysical health: " + getPhysical() +
-      "\nMental health: " + getMental() +
+      "\nPhysical health: " + (int)getPhysical() +
+      "\nMental health: " + (int)getMental() +
       "\nAge: " + getAge() +
       "\nMoney: " + getMoney() +
       "\nSickness: " + _sickType;
     }else{
       return "\nName: " + getName() +
-      "\nPhysical health: " + getPhysicalf() + " -> " + getPhysical() +
-      "\nMental health: " + getMentalf() + " -> " + getMental() +
+      "\nPhysical health: " + (int)getPhysicalf() + " -> " + (int)getPhysical() +
+      "\nMental health: " + (int)getMentalf() + " -> " + (int)getMental() +
       "\nAge: " + getAge() +
       "\nMoney: " + getMoneyf() + " -> " + getMoney() +
       "\nSickness: " + _sickTypef + " -> " + _sickType;

@@ -5,9 +5,9 @@ public class Child extends Human{
   //default constructor
   public Child(){
     _name = "Life";
-    _physHealthf = 5.0;
+    _physHealthf = 8.0;
     _mentalHealthf = 5.0;
-    _physHealth = 5.0;
+    _physHealth = 8.0;
     _mentalHealth = 5.0;
     _moneyf = 0;
     _money = 0;

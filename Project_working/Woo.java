@@ -163,6 +163,8 @@ public class Woo{
               a.setMoney(a.getMoney() - 20000);
       		    break;
       		}
+          System.out.println("----------------------");
+          System.out.println();
           ((Adult)a).payBills();
           ((Adult)a).payTaxes();
       	 }
@@ -172,6 +174,16 @@ public class Woo{
             a.loseSick();
       	    a.growUp();
       	    Settings.randEvent(a);
+
+            if(a.getMoney() < 0){
+              a.setMoney(0);
+            }
+            if(a.getMental() > 10){
+              a.setMental(10);
+            }
+            if(a.getPhysical() > 10){
+              a.setPhysical(10);
+            }
       	}
       }
 }//end class
