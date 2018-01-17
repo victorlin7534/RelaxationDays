@@ -54,7 +54,7 @@ public class Woo{
     	System.out.println("Give the human a name: ");
     	Human a = new Child(Keyboard.readString());
 
-      if(Math.random() < 0.05){
+      if(Math.random() < 0.4){
         a.getSick("birth");
       }
 
@@ -74,104 +74,104 @@ public class Woo{
 
       //Simulate life
     	while(!a.isDead() && a.getAge() < 31){
-    	    if(a.getAge() < 13){ //Child
-    		System.out.println(a);
-    		System.out.println("\nWhat should " + a._name + " do today? a) school b) playground c) stay home");
-    		String act = Keyboard.readString();
-    		switch(act){
+        System.out.println(a);
+    	  if(a.getAge() < 13){ //Child
+      		System.out.println("\nWhat should " + a._name + " do today? a) school b) playground c) stay home");
+      		String act = Keyboard.readString();
+      		switch(act){
 
-    		case "a":
-    		    System.out.println("\n" + a._name + " goes to school that day to acquire knowledge.\n");
-    		    Settings.atSchool(a);
-    		    break;
+      		case "a":
+      		    System.out.println("\n" + a._name + " goes to school that day to acquire knowledge.\n");
+      		    Settings.atSchool(a);
+      		    break;
 
-    		case "b":
-    		    Settings.atPark(a);
-    		    break;
+      		case "b":
+      		    Settings.atPark(a);
+      		    break;
 
-    		case "c":
-    		    Settings.atHome(a);
-    		    break;
+      		case "c":
+      		    Settings.atHome(a);
+      		    break;
 
-    		default:
-    		    Settings.atTrip(a);
-    		    break;
-    		}
-    	    }
+      		default:
+      		    Settings.atTrip(a);
+      		    break;
+      		}
+      	    }
 
-    	    else if(a.getAge() < 18 && !a._hasChild){//Teen
-    		//System.out.println("\n" + a._name + " is now a teenager!");
-    		Human a_temp = new Teen(a); //Teen with values from Human a
-    		a = a_temp;
-    		//  a.partTime();
+      	    else if(a.getAge() < 18 && !a._hasChild){//Teen
+      		//System.out.println("\n" + a._name + " is now a teenager!");
+      		Human a_temp = new Teen(a); //Teen with values from Human a
+      		a = a_temp;
+      		//  a.partTime();
 
-    		System.out.println("\nWhat should " + a._name + " do today? a) school b) party c) stay home");
-    		String act = Keyboard.readString();
-    		switch(act){
-    		case "a":
-    		    Settings.atSchool(a);
-    		    break;
+      		System.out.println("\nWhat should " + a._name + " do today? a) school b) party c) stay home");
+      		String act = Keyboard.readString();
+      		switch(act){
+      		case "a":
+      		    Settings.atSchool(a);
+      		    break;
 
-    		case "b":
-    		    Settings.atParty(a);
-    		    break;
+      		case "b":
+      		    Settings.atParty(a);
+      		    break;
 
-    		case "c":
-    		    Settings.atHome(a);
-    		    break;
-    		}
-    	    }
-    	    else if(a._age == 18){
-    		if(!a._hasChild){
-    		    System.out.println("What is " + a._name+   "'s future job?");
-    		    String job = Keyboard.readString();
-    		    a._future = job;
-    		    System.out.println("What is the average income for such a job? (be realistic)");
-    		    int salary = Keyboard.readInt();
-    		    a._income = salary;
-    		}else{
-    		    a._future = "Laborer";
-    		    a._income = 40000;
-    		}
+      		case "c":
+      		    Settings.atHome(a);
+      		    break;
+      		}
+      	    }
+      	    else if(a._age == 18){
+      		if(!a._hasChild){
+      		    System.out.println("What is " + a._name+   "'s future job?");
+      		    String job = Keyboard.readString();
+      		    a._future = job;
+      		    System.out.println("What is the average income for such a job? (be realistic)");
+      		    int salary = Keyboard.readInt();
+      		    a._income = salary;
+      		}else{
+      		    a._future = "Laborer";
+      		    a._income = 40000;
+      		}
 
-    	    }
-    	    else{
-    		Human a_temp = new Adult(a);
-    		a = a_temp;
-    		//System.out.println(a._income);
-    		//System.out.println(a._future);
-    		//System.out.println("\n" + a._name + " is now a Adult!");
+      	    }
+      	    else{
+      		Human a_temp = new Adult(a);
+      		a = a_temp;
+      		//System.out.println(a._income);
+      		//System.out.println(a._future);
+      		//System.out.println("\n" + a._name + " is now a Adult!");
 
-    		System.out.println("\nWhat should " + a._name + " do today? a) work b) take care of child c) college");
-    		String act = Keyboard.readString();
-    		switch(act){
-    		case "a":
-    		    Settings.atWork(a);
-    		    break;
+      		System.out.println("\nWhat should " + a._name + " do today? a) work b) take care of child c) college");
+      		String act = Keyboard.readString();
+      		switch(act){
+      		case "a":
+      		    Settings.atWork(a);
+      		    break;
 
-    		case "b":
-        if(a._hasChild){
-          ( (Adult)a).childCare();
-        }
-        else{
-          System.out.println(a._name + " doesn't have children....");
-        }
-    		    break;
-
-    		case "c":
-    		    Settings.atSchool(a);
-            a.setMoney(a.getMoney() - 20000);
-    		    break;
-    		}
-        ((Adult)a).payBills();
-        ((Adult)a).payTaxes();
-    	 }
-          if(a._physHealth == 1 || a._mentalHealth == 1){
-            Settings.atHospital(a);
+      		case "b":
+          if(a._hasChild){
+            ( (Adult)a).childCare();
           }
-          a.loseSick();
-    	    a.growUp();
-    	    Settings.randEvent(a);
-    	}
-    }
+          else{
+            System.out.println(a._name + " doesn't have children....");
+          }
+      		    break;
+
+      		case "c":
+      		    Settings.atSchool(a);
+              a.setMoney(a.getMoney() - 20000);
+      		    break;
+      		}
+          ((Adult)a).payBills();
+          ((Adult)a).payTaxes();
+      	 }
+            if(a._physHealth == 1 || a._mentalHealth == 1){
+              Settings.atHospital(a);
+            }
+            a.loseSick();
+      	    a.growUp();
+      	    Settings.randEvent(a);
+      	}
+      }
 }//end class

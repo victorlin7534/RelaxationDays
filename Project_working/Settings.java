@@ -146,7 +146,7 @@ public class Settings{
       break;
 
       case "c":
-      System.out.println("You have made a friend");
+      System.out.println(x.getName() + " has made a friend");
       x._mentalHealth += 1.5;
     }
     return x;
@@ -263,12 +263,8 @@ public class Settings{
           atHospital(x);
         }
       }
-    }else if(chance > 0.9){
-      if(chance2 > 0.1){
-        if(chance3 < 0.2){
+    }else if(chance > 0.7){
           x.getSick("random");
-        }
-      }
     }
   }
 }//end class
