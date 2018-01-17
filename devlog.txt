@@ -10,24 +10,26 @@ The Life of a Human
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--hierarchy/class structure
--using life-stage specific METHODS
--handling use of dialogue in Settings
+-hierarchy/class structure. With a key to success and a flowchart, we were able to figure out the proper hierarchy.
+-using life-stage specific methods. Remembering lessons on casting and static and non-static methods helped a lot with this issue.
+-handling use of dialogue in Settings. With the help of the Scanner class and File class, we were able to read the dialogue from the .txt files.
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -Death may occur but simulation doesn't stop until end of method.
+-User can just use arrow up key to cheat minigames.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -How to read a text file in java
 -Pointers
 -You can have an ArrayList of HashMaps
--Timing in java
+-Using time in java
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--Removed interfaces
+-Removed interfaces as they served no useful purpose.
+
 
 
 LESSONS LEARNED
