@@ -30,6 +30,7 @@ COOL STUFF LEARNED
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -Removed interfaces as they served no useful purpose.
+-Play simulation until the adult reaches his thirties due to proabable boredom from repetition.
 
 
 
