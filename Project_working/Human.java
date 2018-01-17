@@ -164,24 +164,27 @@ public abstract class Human{
   public void loseSick(){
     switch(_sickness){
       case "STDS":
+        double temp = ((Double)Woo.STDS.get(_sickType)).doubleValue();
         _physHealthf = _physHealth;
         _mentalHealthf = _mentalHealth;
-        _physHealth -= ((Double)Woo.STDS.get(_sickType)).doubleValue();
-        _mentalHealth -= ((Double)Woo.STDS.get(_sickType)).doubleValue();
+        _physHealth -= temp;
+        _mentalHealth -= temp;
         break;
 
       case "BIRTH":
+        temp = ((Double)Woo.BIRTH.get(_sickType)).doubleValue();
         _physHealthf = _physHealth;
         _mentalHealthf = _mentalHealth;
-        _physHealth -= ((Double)Woo.BIRTH.get(_sickType)).doubleValue();
-        _mentalHealth -= ((Double)Woo.BIRTH.get(_sickType)).doubleValue();
+        _physHealth -= temp;
+        _mentalHealth -= temp;
         break;
 
       case "RANDOM":
+        temp = ((Double)Woo.RANDOM.get(_sickType)).doubleValue();
         _physHealthf = _physHealth;
         _mentalHealthf = _mentalHealth;
-        _physHealth -= ((Double)Woo.RANDOM.get(_sickType)).doubleValue();
-        _mentalHealth -= ((Double)Woo.RANDOM.get(_sickType)).doubleValue();
+        _physHealth -= temp;
+        _mentalHealth -= temp;
         break;
   }
 }

@@ -146,7 +146,7 @@ public class Settings{
       break;
 
       case "c":
-      System.out.println(x.getName() + " has made a friend");
+      System.out.println(x.getName()   + " has made a friend");
       x._mentalHealth += 1.5;
     }
     return x;
@@ -255,9 +255,10 @@ public class Settings{
           x.setPhysical(0);
         }
       }else if(chance2 > 0.9){
-        System.out.println("You were hit by a car");
+        System.out.println();
+        System.out.println(x.getName() + " was hit by a car");
         if(chance3 < 0.1){
-          System.out.println("Rest in Peace...You have died from the car accident.");
+          System.out.println("Rest in Peace..." + x.getName() + " has died from the car accident.");
           x.setPhysical(0);
         }else{
           atHospital(x);
