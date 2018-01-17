@@ -1,4 +1,4 @@
-public class Child extends Human implements Nerd,Athlete{
+public class Child extends Human{
 
   //instance variables
 

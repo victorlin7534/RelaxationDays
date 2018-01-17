@@ -1,4 +1,4 @@
-import cs1.Keyboard;
+  import cs1.Keyboard;
 import java.util.ArrayList;
 
 public abstract class Human{
@@ -15,6 +15,10 @@ public abstract class Human{
   protected String _future;
   protected int _income;
   protected boolean _hasChild;
+
+  protected String _sickness;
+  protected String _sickType;
+  protected String _sickTypef;
 
   //*************ACCESSOR METHODS*********************
   public String getName(){return _name;}
@@ -74,13 +78,15 @@ public abstract class Human{
       "\nPhysical health: " + getPhysical() +
       "\nMental health: " + getMental() +
       "\nAge: " + getAge() +
-      "\nMoney: " + getMoney();
+      "\nMoney: " + getMoney() +
+      "\nSickness: " + _sickType;
     }
     return "\nName: " + getName() +
     "\nPhysical health: " + getPhysicalf() + " -> " + getPhysical() +
     "\nMental health: " + getMentalf() + " -> " + getMental() +
     "\nAge: " + getAge() +
-    "\nMoney: " + getMoneyf() + " -> " + getMoney();
+    "\nMoney: " + getMoneyf() + " -> " + getMoney()
+    "\nSickness: " + _sickTypef + " -> " + _sickType;
   }
 
   public void getInjured() {
@@ -100,6 +106,7 @@ public abstract class Human{
 
       else if(probability < 0.5){
         System.out.println("Did you not take health class?" + getName() + ". You got an STD.");
+        getSick("sex");
       }
 
       else if(probability < 0.75){
@@ -111,12 +118,62 @@ public abstract class Human{
       else{
         System.out.println("You're now a parent and you also got STDs/ ");
 	_hasChild = true;
+  getSick("sex");
       }
       break;
       case "b":
       System.out.println(getName() + " practiced self retraint! Stay safe!");
       break;
     }
+  }
+
+  public void getSick(String type){
+    if(_sickness.length() == 0){
+      switch(type){
+        case "sex":
+          _sickness = "STDS";
+          _sickTypef = "";
+          _sickType = stdArray.get(Settings.oneOf(0,2));
+          break;
+
+        case "birth";
+          _sickness = "BIRTH";
+          _sickTypef = "";
+          _sickType = birthArray.get(Settings.oneOf(0,2));
+          break;
+
+        case "random":
+          _sickness = "RANDOM";
+          _sickTypef = "";
+          _sickType = randomArray.get(Settings.oneOf(0,2));
+          break;
+        }
+      }
+      System.out.println("You got: " + _sickType);
+    }
+
+  public void loseSick(){
+    switch(_sickness){
+      case "STDS":
+        _physHealthf = _physHealth;
+        _mentalHealthf = _mentalHealth;
+        _physHealth -= Woo.STDS.get(_sickType).doubleValue();
+        _mentalHealth -= Woo.STDS.get(_sickType).doubleValue();
+        break;
+
+      case "BIRTH":
+        _physHealthf = _physHealth;
+        _mentalHealthf = _mentalHealth;
+        _physHealth -= Woo.BIRTH.get(_sickType).doubleValue();
+        _mentalHealth -= Woo.BIRTH.get(_sickType).doubleValue();
+        break;
+
+      case "RANDOM":
+        _physHealthf = _physHealth;
+        _mentalHealthf = _mentalHealth;
+        _physHealth -= Woo.RANDOM.get(_sickType).doubleValue();
+        _mentalHealth -= Woo.RANDOM.get(_sickType).doubleValue();
+        break;
   }
 
   public void doDrugs(){

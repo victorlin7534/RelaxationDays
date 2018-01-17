@@ -4,18 +4,37 @@ What is the solution to the equation 2x + 4 = 8? a) 0 b) 1 c) 2
 c
 How many letters are in the word "Mississippi"? a) 11 b)12 c)13
 a
+What do you call an animal that goes "Bark"? a) Tree b) Dog c) Cow
+b
+What is considered a natural resource? a) Computers b) Water c) Lamps
+b
+What is (2 + 9 * 2)? a) 13 b) 20 c) 22
+b
 What is the worst case runtime for Selection Sort? a) O(log n) b) O(1) c) O(n^2)
 c
 What is the derivative of the equation x^2 + x + 1? a) x + 1 b) 2x+1 c) 2x + x
 b
 What year did Ghandi walk the Salt March? a) 1930 b) 1900 c) 1945
 a
+What is the momentum of a 2kg ball moving at 6m/s? a) 3kg m/s b) 12kg m/s c) 8kg m/s
+b
+(x-2)^2 + (y+1)^2 = 4^2 represents an .... a) ellipse b) parabola c) circle
+c
+What is the number one cause of death in the US? a) Heart disease b) Cancer c) Stroke
+a
 Injury to the human amygdala impairs recognition of what facial expression? a) fear b) sadness c) happiness
 a
 If it is observed that, in a particular market, price has risen and quantity exchanged has increased, it is likely that: a) supply decreased b) demand increased c) demand decreased
 b
-'Repeat after me children - A is for apple, B is for book, C is for cat...'
-'So kid, here is the multiplication table ... 1 * 2 = 2 .... 6 * 6 = 36'
-'Okay students, pour the water in the soil for the plant to grow.'
+Myelin degeneration is a major symptom of which disease? a) Parkinson's b) Huntington's c) multiple sclerosis
+c
+Which region of the retina contains the most cones? a) fovea b) pupil c) lens
+a
+Do investors get rewarded for bearing idiosyncratic risk? a) yes b) no c) depends on the market
+b
+What Dominican dictator ruled from 1930 till his assassination in 1961? a) Trujillo b) Mugabe c) Cartez
+a
+'I am so happy my students listen to me...'
+'....and that is what will be on your next test students! You are one step ahead if you listened. '
 'Wake up sleepy head or you'll fail in life!'
 'Pay attention so you dont fail the next test!'

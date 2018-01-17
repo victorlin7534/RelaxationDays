@@ -109,25 +109,34 @@ public class Minigames{
     }
   }
 
+
+
   public static int test(File file,Human x){
+    int lineChild = Settings.oneOf(1,11);
+    if(lineChild % 2 == 0){lineChild+=1;}
+    int lineTeen = Settings.oneOf(13,23);
+    if(lineTeen % 2 == 0){lineTeen+=1;}
+    int lineAdult = Settings.oneOf(25,35);
+    if(lineAdult % 2 == 0){lineAdult+=1;}
     System.out.println("Surprise! It's a relaxation day! (that means test...)");
     int testScore = 0;
+
     if(x instanceof Child){
-      for(int i=1;i<6;i+=2){
+      for(int i=lineChild;i< lineChild + 3;i+=2){
         System.out.println(Settings.talk(file,i));
         if(Keyboard.readString().equals(Settings.talk(file,i+1))){
           testScore++;
         }
       }
     }else if(x instanceof Teen){
-      for(int j=7;j<12;j+=2){
+      for(int j=lineTeen;j<lineTeen+3;j+=2){
         System.out.println(Settings.talk(file,j));
         if(Keyboard.readString().equals(Settings.talk(file,j+1))){
           testScore++;
         }
       }
     }else{
-	for(int j=13;j<18;j+=2){
+	for(int j=lineAdult;j<lineAdult+3;j+=2){
 	    System.out.println(Settings.talk(file,j));
 	    if(Keyboard.readString().equals(Settings.talk(file,j+1))){
 		testScore++;
