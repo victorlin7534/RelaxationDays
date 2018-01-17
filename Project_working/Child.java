@@ -5,8 +5,11 @@ public class Child extends Human implements Nerd,Athlete{
   //default constructor
   public Child(){
     _name = "Life";
+    _physHealthf = 10.0;
+    _mentalHealthf = 10.0;
     _physHealth = 10.0;
     _mentalHealth = 10.0;
+    _moneyf = 0;
     _money = 0;
     _age = 0;
     _future = "";
@@ -48,11 +51,13 @@ public class Child extends Human implements Nerd,Athlete{
   }
 
   public void study(){
+    _mentalHealthf = _mentalHealth;
     _mentalHealth += 0.5;
   }
 
 public void workout(){
   System.out.println("This is some good  cadiovascular exercise for " + this.getName() + ". + 0.5 physical health");
+  _physHealthf = _physHealth;
   _physHealth += 0.5;
 }
 

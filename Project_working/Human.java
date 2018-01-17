@@ -7,6 +7,7 @@ public abstract class Human{
   protected String _name;
   protected double _physHealthf; //old value
   protected double _mentalHealthf; //old value
+  protected int _moneyf; //old value
   protected double _physHealth; //Scale of 0 - 10 where 10 is peak physical health
   protected double _mentalHealth; //Scale of 0 - 10 where 10 is peak mental health
   protected int _money; //amount of money indicates class level
@@ -21,6 +22,8 @@ public abstract class Human{
   public double getAge(){return _age;}
 
   public int getMoney(){return _money;}
+
+  public int getMoneyf(){return _moneyf;}
 
   public double getPhysical(){return _physHealth;}
 
@@ -37,6 +40,10 @@ public abstract class Human{
   public void setMoney(int m){_money = m;}
 
   public void setPhysical(double health){_physHealth = health;}
+
+  public void setPhysicalf(double health){_physHealthf = health;}
+
+  public void setMentalf(double health){_mentalHealthf = health;}
 
   public void setMental(double health){_mentalHealth = health;}
   //**************************************************
@@ -62,11 +69,18 @@ public abstract class Human{
   }
 
   public String toString(){
+    if(getPhysicalf() == getPhysical() && getMentalf() == getMental() && getMoneyf() == getMoney()){
+      return "\nName: " + getName() +
+      "\nPhysical health: " + getPhysical() +
+      "\nMental health: " + getMental() +
+      "\nAge: " + getAge() +
+      "\nMoney: " + getMoney();
+    }
     return "\nName: " + getName() +
-    "\nPhysical health: " + getPhysicalf() + "->" + getPhysical() +
-    "\nMental health: " + getMentalf() + "->" + getMental() +
+    "\nPhysical health: " + getPhysicalf() + " -> " + getPhysical() +
+    "\nMental health: " + getMentalf() + " -> " + getMental() +
     "\nAge: " + getAge() +
-    "\nMoney: " + getMoney();
+    "\nMoney: " + getMoneyf() + " -> " + getMoney();
   }
 
   public void getInjured() {

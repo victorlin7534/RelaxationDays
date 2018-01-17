@@ -9,9 +9,12 @@ public class Teen extends Human{
   //default constructor
   public Teen(Human o){
     _name = o._name;
+    _physHealthf = o._physHealth;
+    _mentalHealthf = o._mentalHealth;
     _physHealth = o._physHealth;
     _mentalHealth = o._mentalHealth;
     _age = o._age;
+    _moneyf = o._moneyf;
     _money = o._money;
     _future = "";
     _income = 0;
@@ -54,8 +57,10 @@ public class Teen extends Human{
 
 public void partTime(int hours){
   System.out.println(this._name + " likes to make money!");
-  this._mentalHealth -= 0.5;
-  this._money += 7 * hours;
+  _mentalHealthf = _mentalHealth;
+  _moneyf = _money;
+  _mentalHealth -= 0.5;
+  _money += 7 * hours;
 }
 
 public void sleep(){
