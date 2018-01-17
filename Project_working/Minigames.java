@@ -15,7 +15,7 @@ public class Minigames{
     System.out.println("-----------------------------------------------------------------------");
     String random100000 = Keyboard.readString();
     System.out.println("-----------------------------------------------------------------------");
-    System.out.println("First, choose what song you want to listen to:\n1. Work By Rihanna (4 Rounds) 2. Im Ready to Go to Work by Spongebob (10 rounds)\n");
+    System.out.println("First, choose what song you want to listen to:\n1. Work By Rihanna (4 Rounds) 2. Im Ready to Go to Work by Spongebob (4 rounds)\n");
     System.out.println("-----------------------------------------------------------------------");
     int input = Keyboard.readInt();
     System.out.println("-----------------------------------------------------------------------");
@@ -40,7 +40,7 @@ public class Minigames{
       readthis = readthis.toLowerCase();
       if(readthis.equals("work work work work work work")){
         long finish = System.currentTimeMillis();
-        if( finish - start >= 2000){
+        if( finish - start >= 3500){
           System.out.println("-----------------------------------------------------------------------");
           System.out.println(x.getName() + " was too slow and got yelled at by the boss...\nGame Over");
           x.setMentalf(x.getMentalf());
@@ -61,7 +61,7 @@ public class Minigames{
           readthis = readthis.toLowerCase();
           if(readthis.equals("he said me haffi")){
             finish = System.currentTimeMillis();
-            if( finish - start >= 2000){
+            if( finish - start >= 3500){
               System.out.println("-----------------------------------------------------------------------");
               System.out.println(x.getName() + " was too slow and got yelled at by the boss...\nGame Over");
               x.setMental(x.getMental() - 0.5);
@@ -82,7 +82,7 @@ public class Minigames{
               readthis = readthis.toLowerCase();
               if(readthis.equals("work work work work work work")){
                 finish = System.currentTimeMillis();
-                if( finish - start >= 2000){
+                if( finish - start >= 3500){
                   System.out.println("-----------------------------------------------------------------------");
                   System.out.println(x.getName() + " was too slow and got yelled at by the boss...\nGame Over");
                   x.setMentalf(x.getMental());
@@ -103,7 +103,7 @@ public class Minigames{
                   readthis = readthis.toLowerCase();
                   if(readthis.equals("he see me do mi")){
                     finish = System.currentTimeMillis();
-                    if( finish - start >= 2000){
+                    if( finish - start >= 3500){
                       System.out.println("-----------------------------------------------------------------------");
                       System.out.println(x.getName() + " was too slow and got yelled at by the boss...\nGame Over");
                       x.setMentalf(x.getMental());
@@ -165,7 +165,7 @@ public class Minigames{
       readthis = readthis.toLowerCase();
       if(readthis.equals("im ready")){
         long finish = System.currentTimeMillis();
-        if( finish - start >= 2000){
+        if( finish - start >= 3500){
           System.out.println("-----------------------------------------------------------------------");
           System.out.println(x.getName() + " was too slow and got yelled at by the boss...\nGame Over");
           x.setMentalf(x.getMentalf());
@@ -186,7 +186,7 @@ public class Minigames{
           readthis = readthis.toLowerCase();
           if(readthis.equals("im ready")){
             finish = System.currentTimeMillis();
-            if( finish - start >= 2000){
+            if( finish - start >= 3500){
               System.out.println("-----------------------------------------------------------------------");
               System.out.println(x.getName() + " was too slow and got yelled at by the boss...\nGame Over");
               x.setMental(x.getMental() - 0.5);
@@ -207,7 +207,7 @@ public class Minigames{
               readthis = readthis.toLowerCase();
               if(readthis.equals("to go to work")){
                 finish = System.currentTimeMillis();
-                if( finish - start >= 2000){
+                if( finish - start >= 3500){
                   System.out.println("-----------------------------------------------------------------------");
                   System.out.println(x.getName() + " was too slow and got yelled at by the boss...\nGame Over");
                   x.setMentalf(x.getMental());
@@ -228,7 +228,7 @@ public class Minigames{
                   readthis = readthis.toLowerCase();
                   if(readthis.equals("hello krusty krab")){
                     finish = System.currentTimeMillis();
-                    if( finish - start >= 2000){
+                    if( finish - start >= 3500){
                       System.out.println("-----------------------------------------------------------------------");
                       System.out.println(x.getName() + " was too slow and got yelled at by the boss...\nGame Over");
                       x.setMental(x.getMental() - 0.5);
@@ -255,8 +255,8 @@ public class Minigames{
               } else {
                 System.out.println("-----------------------------------------------------------------------");
                 System.out.println(x.getName() + " typed the wrong characters and was yelled at...\nGame Over");
-                x.setMentalf(x.getMental());
                 x.setMental(x.getMental() - 0.5);
+                x.setMentalf(x.getMental());
                 System.out.println("-----------------------------------------------------------------------");
                 return false;
               }
@@ -301,7 +301,7 @@ public class Minigames{
     input = input.toLowerCase();
     if(input.equals("i am not drunk")){
       long finish = System.currentTimeMillis();
-      if( finish - start >= 4000){
+      if( finish - start >= 2500){
         System.out.println("-----------------------------------------------------------------------");
         System.out.println(x.getName() + " was too slow and has fallen over...\nGame Over");
         System.out.println("-----------------------------------------------------------------------");
@@ -313,7 +313,7 @@ public class Minigames{
       input2 = input2.toLowerCase();
       if(input2.equals("i am not drunk")){
         long finish2 = System.currentTimeMillis();
-        if( finish2 - start2 >= 4000){
+        if( finish2 - start2 >= 2500){
           System.out.println("-----------------------------------------------------------------------");
           System.out.println(x.getName() + " was too slow and has fallen over...\nGame Over");
           System.out.println("-----------------------------------------------------------------------");
@@ -325,7 +325,7 @@ public class Minigames{
         input3 = input3.toLowerCase();
         if(input3.equals("i am not drunk")){
           long finish3 = System.currentTimeMillis();
-          if( finish3 - start3 >= 4000){
+          if( finish3 - start3 >= 2500){
             System.out.println("-----------------------------------------------------------------------");
             System.out.println(x.getName() + " was too slow and has fallen over...\nGame Over");
             System.out.println("-----------------------------------------------------------------------");
@@ -449,7 +449,7 @@ public class Minigames{
       String word = temp[(int)(Math.random() * 4.01)];
       System.out.println(Woo.TYPE.get(word));
       long fin = System.currentTimeMillis();
-      if(fin - init > 1500){
+      if(fin - init > 1000){
         System.out.println("Sorry, you ran out of time");
       }else{
         key = Keyboard.readString().toLowerCase();
@@ -568,6 +568,7 @@ public class Minigames{
       System.out.println("=====================");
       System.out.println("  " + selection[2][0] + "  " + " ||  " + selection[2][1] + "  || " + "  " + selection[2][2] + "  ");
       int choosing = Keyboard.readInt();
+      
       if( choosing <= 3){
         grid[0][choosing - 1] = "  " + symbol + "  ";
         selection[0][choosing - 1] = " ";
