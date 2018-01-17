@@ -9,9 +9,9 @@ public class Woo{
     protected static HashMap RANDOM;
     protected static HashMap TYPE;
 
-    protected static ArrayList<String> stdArray;
-    protected static ArrayList<String> birthArray;
-    protected static ArrayList<String> randomArray;
+    protected static ArrayList<String> stdArray = new ArrayList<String>();
+    protected static ArrayList<String> birthArray = new ArrayList<String>();
+    protected static ArrayList<String> randomArray = new ArrayList<String>();
 
     public static void create(){
     	STDS = new HashMap<String,Double>(3);
@@ -71,7 +71,7 @@ public class Woo{
     	a._age = 6.0;
 
     	// a._age = 14.0; used for teen testing purposes :)
-    	while(!a.isDead() && a.getAge() < 100){
+    	while(!a.isDead() && a.getAge() < 31){
     	    System.out.println(a);
     	    if(a.getAge() < 13){ //Child
     		System.out.println(a);
@@ -122,11 +122,11 @@ public class Woo{
     		}
     	    }
     	    else if(a._age == 18){
-    		if(a._hasChild){
+    		if(!a._hasChild){
     		    System.out.println("What is " + a._name+   "'s future job?");
     		    String job = Keyboard.readString();
     		    a._future = job;
-    		    System.out.println("What is the average income for such a job?");
+    		    System.out.println("What is the average income for such a job? (be realistic)");
     		    int salary = Keyboard.readInt();
     		    a._income = salary;
     		}else{
@@ -150,7 +150,12 @@ public class Woo{
     		    break;
 
     		case "b":
-    		    ( (Adult)a).childCare();
+        if(a._hasChild){
+          ( (Adult)a).childCare();
+        }
+        else{
+          System.out.println(a._name + " doesn't have children....");
+        }
     		    break;
 
     		case "c":

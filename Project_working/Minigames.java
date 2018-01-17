@@ -3,6 +3,285 @@ import java.io.*;
 import java.util.*;
 
 public class Minigames{
+  public static boolean work1(Human x){
+    System.out.println("-----------------------------------------------------------------------");
+    System.out.println("|Welcome to  ---- The Working Game: Type Out the Work Song! ----       |");
+    System.out.println("|In this game, the objective is to finish writing your report for work.|");
+    System.out.println("|To finish the paper, you must type all the lyrics to the song as      |");
+    System.out.println("|you see them on your screen. The time limit is 20 seconds and the     |");
+    System.out.println("|number of rounds depend on the song you choose.                       |");
+    System.out.println("|              Press any letter and enter when you're ready            |");
+    System.out.println("-----------------------------------------------------------------------");
+    String random100000 = Keyboard.readString();
+    System.out.println("-----------------------------------------------------------------------");
+    System.out.println("First, choose what song you want to listen to:\n1. Work By Rihanna (4 Rounds) 2. Im Ready to Go to Work by Spongebob (10 rounds)\n");
+    System.out.println("-----------------------------------------------------------------------");
+    int input = Keyboard.readInt();
+    System.out.println("-----------------------------------------------------------------------");
+    if(!(input == 1 || input == 2)){
+      System.out.println("That's not a valid input.\nTry again (Another mistaken input will result in being assigned Work by Rihanna)");
+      System.out.println("-----------------------------------------------------------------------");
+      input = Keyboard.readInt();
+      System.out.println("-----------------------------------------------------------------------");
+    }
+    if(!(input == 1 || input == 2)){
+      System.out.println("Auto-assigning Work by Rihanna");
+      input = 1;
+    }
+    if(input == 1){
+      System.out.println("-----------------------------------------------------------------------");
+      System.out.println("                         Good Luck, Have Fun                           ");
+      System.out.println("-----------------------------------------------------------------------");
+      System.out.println("|Round 1|");
+      System.out.println("Work, work, work, work, work, work");
+      long start = System.currentTimeMillis();
+      String readthis = Keyboard.readString();
+      readthis = readthis.toLowerCase();
+      if(readthis.equals("Work, work, work, work, work, work")){
+        long finish = System.currentTimeMillis();
+        if( finish - start >= 2000){
+          System.out.println("-----------------------------------------------------------------------");
+          System.out.println(x.getName() + " was too slow and got yelled at by the boss...\nGame Over");
+          x.setMentalf(x.getMentalf());
+          x.setMental(x.getMental() - 0.5);
+          System.out.println("-----------------------------------------------------------------------");
+          return false;
+        }
+        else {
+          System.out.println("-----------------------------------------------------------------------");
+          System.out.println(x.getName() + " finished in time and was complimented by the boss!");
+          x.setMentalf(x.getMentalf());
+          x.setMental(x.getMental() + 0.25);
+          System.out.println("-----------------------------------------------------------------------");
+          System.out.println("|Round 2|");
+          System.out.println("He said me haffi");
+          start = System.currentTimeMillis();
+          readthis = Keyboard.readString();
+          readthis = readthis.toLowerCase();
+          if(readthis.equals("He said me haffi")){
+            finish = System.currentTimeMillis();
+            if( finish - start >= 2000){
+              System.out.println("-----------------------------------------------------------------------");
+              System.out.println(x.getName() + " was too slow and got yelled at by the boss...\nGame Over");
+              x.setMental(x.getMental() - 0.5);
+              System.out.println("-----------------------------------------------------------------------");
+              return false;
+            }
+            else{
+              System.out.println("-----------------------------------------------------------------------");
+              System.out.println(x.getName() + " finished in time and was complimented by the boss!");
+              x.setMentalf(x.getMentalf());
+              x.setMental(x.getMental() + 0.25);
+
+              System.out.println("-----------------------------------------------------------------------");
+              System.out.println("|Round 3|");
+              System.out.println("Work, work, work, work, work, work");
+              start = System.currentTimeMillis();
+              readthis = Keyboard.readString();
+              readthis = readthis.toLowerCase();
+              if(readthis.equals("Work, work, work, work, work, work")){
+                finish = System.currentTimeMillis();
+                if( finish - start >= 2000){
+                  System.out.println("-----------------------------------------------------------------------");
+                  System.out.println(x.getName() + " was too slow and got yelled at by the boss...\nGame Over");
+                  x.setMentalf(x.getMental());
+                  x.setMental(x.getMental() - 0.5);
+                  System.out.println("-----------------------------------------------------------------------");
+                  return false;
+                }
+                else {
+                  System.out.println("-----------------------------------------------------------------------");
+                  System.out.println(x.getName() + " finished in time and was complimented by the boss!");
+                  x.setMentalf(x.getMental());
+                  x.setMental(x.getMental() + 0.25);
+                  System.out.println("-----------------------------------------------------------------------");
+                  System.out.println("|Round 4|");
+                  System.out.println("He see me do mi");
+                  start = System.currentTimeMillis();
+                  readthis = Keyboard.readString();
+                  readthis = readthis.toLowerCase();
+                  if(readthis.equals("He see me do mi")){
+                    finish = System.currentTimeMillis();
+                    if( finish - start >= 2000){
+                      System.out.println("-----------------------------------------------------------------------");
+                      System.out.println(x.getName() + " was too slow and got yelled at by the boss...\nGame Over");
+                      x.setMentalf(x.getMental());
+                      x.setMental(x.getMental() - 0.5);
+                      System.out.println("-----------------------------------------------------------------------");
+                      return false;
+                    }
+                    else{
+                      System.out.println("-----------------------------------------------------------------------");
+                      System.out.println(x.getName() + " finished everything in time!\nGood Job!");
+                      x.setMentalf(x.getMental());
+                      x.setMental(x.getMental() + 0.5);
+                      System.out.println("-----------------------------------------------------------------------");
+                      return true;
+                    }
+                  } else {
+                    System.out.println("-----------------------------------------------------------------------");
+                    System.out.println(x.getName() + " typed the wrong characters and was yelled at...\nGame Over");
+                    x.setMentalf(x.getMental());
+                    x.setMental(x.getMental() - 0.5);
+                    System.out.println("-----------------------------------------------------------------------");
+                    return false;
+                  }
+                }
+              } else {
+                System.out.println("-----------------------------------------------------------------------");
+                System.out.println(x.getName() + " typed the wrong characters and was yelled at...\nGame Over");
+                x.setMentalf(x.getMental());
+                x.setMental(x.getMental() - 0.5);
+                System.out.println("-----------------------------------------------------------------------");
+                return false;
+              }
+            }
+          } else {
+            System.out.println("-----------------------------------------------------------------------");
+            System.out.println(x.getName() + " typed the wrong characters and was yelled at...\nGame Over");
+            x.setMentalf(x.getMental());
+            x.setMental(x.getMental() - 0.5);
+            System.out.println("-----------------------------------------------------------------------");
+            return false;
+          }
+        }
+      } else {
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println(x.getName() + " typed the wrong characters and was yelled at...\nGame Over");
+        x.setMentalf(x.getMental());
+        x.setMental(x.getMental() - 0.5);
+        System.out.println("-----------------------------------------------------------------------");
+        return false;
+      }
+    } else {
+      System.out.println("-----------------------------------------------------------------------");
+      System.out.println("                         Good Luck, Have Fun                           ");
+      System.out.println("-----------------------------------------------------------------------");
+      System.out.println("|Round 1|");
+      System.out.println("I'm ready");
+      long start = System.currentTimeMillis();
+      String readthis = Keyboard.readString();
+      readthis = readthis.toLowerCase();
+      if(readthis.equals("I'm ready")){
+        long finish = System.currentTimeMillis();
+        if( finish - start >= 2000){
+          System.out.println("-----------------------------------------------------------------------");
+          System.out.println(x.getName() + " was too slow and got yelled at by the boss...\nGame Over");
+          x.setMentalf(x.getMentalf());
+          x.setMental(x.getMental() - 0.5);
+          System.out.println("-----------------------------------------------------------------------");
+          return false;
+        }
+        else {
+          System.out.println("-----------------------------------------------------------------------");
+          System.out.println(x.getName() + " finished in time and was complimented by the boss!");
+          x.setMentalf(x.getMentalf());
+          x.setMental(x.getMental() + 0.25);
+          System.out.println("-----------------------------------------------------------------------");
+          System.out.println("|Round 2|");
+          System.out.println("I'm ready");
+          start = System.currentTimeMillis();
+          readthis = Keyboard.readString();
+          readthis = readthis.toLowerCase();
+          if(readthis.equals("I'm ready")){
+            finish = System.currentTimeMillis();
+            if( finish - start >= 2000){
+              System.out.println("-----------------------------------------------------------------------");
+              System.out.println(x.getName() + " was too slow and got yelled at by the boss...\nGame Over");
+              x.setMental(x.getMental() - 0.5);
+              System.out.println("-----------------------------------------------------------------------");
+              return false;
+            }
+            else{
+              System.out.println("-----------------------------------------------------------------------");
+              System.out.println(x.getName() + " finished in time and was complimented by the boss!");
+              x.setMentalf(x.getMentalf());
+              x.setMental(x.getMental() + 0.25);
+
+              System.out.println("-----------------------------------------------------------------------");
+              System.out.println("|Round 3|");
+              System.out.println("To go to work!");
+              start = System.currentTimeMillis();
+              readthis = Keyboard.readString();
+              readthis = readthis.toLowerCase();
+              if(readthis.equals("To go to work!")){
+                finish = System.currentTimeMillis();
+                if( finish - start >= 2000){
+                  System.out.println("-----------------------------------------------------------------------");
+                  System.out.println(x.getName() + " was too slow and got yelled at by the boss...\nGame Over");
+                  x.setMentalf(x.getMental());
+                  x.setMental(x.getMental() - 0.5);
+                  System.out.println("-----------------------------------------------------------------------");
+                  return false;
+                }
+                else {
+                  System.out.println("-----------------------------------------------------------------------");
+                  System.out.println(x.getName() + " finished in time and was complimented by the boss!");
+                  x.setMentalf(x.getMental());
+                  x.setMental(x.getMental() + 0.25);
+                  System.out.println("-----------------------------------------------------------------------");
+                  System.out.println("|Round 4|");
+                  System.out.println("Hello, Krusty Krab!");
+                  start = System.currentTimeMillis();
+                  readthis = Keyboard.readString();
+                  readthis = readthis.toLowerCase();
+                  if(readthis.equals("Hello, Krusty Krab!")){
+                    finish = System.currentTimeMillis();
+                    if( finish - start >= 2000){
+                      System.out.println("-----------------------------------------------------------------------");
+                      System.out.println(x.getName() + " was too slow and got yelled at by the boss...\nGame Over");
+                      x.setMental(x.getMental() - 0.5);
+                      System.out.println("-----------------------------------------------------------------------");
+                      return false;
+                    }
+                    else{
+                      System.out.println("-----------------------------------------------------------------------");
+                      System.out.println(x.getName() + " finished everything in time!\nGood Job!");
+                      x.setMentalf(x.getMental());
+                      x.setMental(x.getMental() + 0.5);
+                      System.out.println("-----------------------------------------------------------------------");
+                      return true;
+                    }
+                  } else {
+                    System.out.println("-----------------------------------------------------------------------");
+                    System.out.println(x.getName() + " typed the wrong characters and was yelled at...\nGame Over");
+                    x.setMentalf(x.getMental());
+                    x.setMental(x.getMental() - 0.5);
+                    System.out.println("-----------------------------------------------------------------------");
+                    return false;
+                  }
+                }
+              } else {
+                System.out.println("-----------------------------------------------------------------------");
+                System.out.println(x.getName() + " typed the wrong characters and was yelled at...\nGame Over");
+                x.setMentalf(x.getMental());
+                x.setMental(x.getMental() - 0.5);
+                System.out.println("-----------------------------------------------------------------------");
+                return false;
+              }
+            }
+          } else {
+            System.out.println("-----------------------------------------------------------------------");
+            System.out.println(x.getName() + " typed the wrong characters and was yelled at...\nGame Over");
+            x.setMentalf(x.getMental());
+            x.setMental(x.getMental() - 0.5);
+            System.out.println("-----------------------------------------------------------------------");
+            return false;
+          }
+        }
+      } else {
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println(x.getName() + " typed the wrong characters and was yelled at...\nGame Over");
+        x.setMentalf(x.getMental());
+        x.setMental(x.getMental() - 0.5);
+        System.out.println("-----------------------------------------------------------------------");
+        return false;
+      }
+    }
+  }
+
+
+
   public static boolean followLine(Human x){
     System.out.println("-----------------------------------------------------------------------");
     System.out.println("|Welcome to  ---Drunk Line Test----                                    |");
@@ -10,7 +289,7 @@ public class Minigames{
     System.out.println("|able to walk straight you must type 'I am not drunk' into the terminal|");
     System.out.println("|and hit enter each round (4 seconds each round). The rules are simple |");
     System.out.println("|no punctuation, capitalization doesn't matter, and spaces do matter.  |");
-    System.out.println("|             Press any key and enter when you're ready!               |");
+    System.out.println("|           Press any letter and enter when you're ready!              |");
     System.out.println("-----------------------------------------------------------------------");
     String random1000 = Keyboard.readString();
     System.out.println("-----------------------------------------------------------------------");
@@ -65,7 +344,7 @@ public class Minigames{
 
       }
       System.out.println("-----------------------------------------------------------------------");
-    System.out.println("That's not right!\nSeems like" + x.getName() + "has fallen over...\nGame Over");
+      System.out.println("That's not right!\nSeems like" + x.getName() + "has fallen over...\nGame Over");
       System.out.println("-----------------------------------------------------------------------");
       return false;
     }
@@ -136,12 +415,12 @@ public class Minigames{
         }
       }
     }else{
-	for(int j=lineAdult;j<lineAdult+3;j+=2){
-	    System.out.println(Settings.talk(file,j));
-	    if(Keyboard.readString().equals(Settings.talk(file,j+1))){
-		testScore++;
-	    }
-	}
+      for(int j=lineAdult;j<lineAdult+3;j+=2){
+        System.out.println(Settings.talk(file,j));
+        if(Keyboard.readString().equals(Settings.talk(file,j+1))){
+          testScore++;
+        }
+      }
     }
     return testScore;
   }
@@ -344,94 +623,94 @@ public class Minigames{
         win = true;
       }
       /*if( firstopp == 0 ){
-        for(int y = 0; y < 3; y++){
-          if(grid[1][y].equals("empty")){
-            grid[1][y] == "  " + symbol2 + "  ";
-          }
-        }
-      }*/
-      pos = (int) (Math.random() * (cpu.size() - 1) );
-      posfinal = cpu.get(pos);
-      if( posfinal <= 3){
-        grid[0][posfinal - 1] = "  " + symbol2 + "  ";
-        selection[0][posfinal - 1] = " ";
-        possible.set(posfinal - 1,0);
-      } else if( posfinal <= 6){
-        grid[1][posfinal - 4] = "  " + symbol2 + "  ";
-        selection[1][posfinal - 4] = " ";
-        possible.set(posfinal - 1,0);
-      } else if( posfinal <= 9){
-        grid[2][posfinal - 7] = "  " + symbol2 + "  ";
-        selection [2][posfinal - 7] = " ";
-        possible.set(posfinal - 1,0);
-      }
-
-      if(grid[0][0].equals("  " + symbol2 + "  ") && grid[0][1].equals("  " + symbol2 + "  ") && grid[0][2].equals("  " + symbol2 + "  ")){
-        win = true;
-        winner = "not";
-        break;
-      } else if(grid[1][0].equals("  " + symbol2 + "  ") && grid[1][1].equals("  " + symbol2 + "  ") && grid[1][2].equals("  " + symbol2 + "  ")){
-        win = true;
-        winner = "not";
-        break;
-      } else if(grid[2][0].equals("  " + symbol2 + "  ") && grid[2][1].equals("  " + symbol2 + "  ") && grid[2][2].equals("  " + symbol2 + "  ")){
-        win = true;
-        winner = "not";
-        break;
-      } else if(grid[0][0].equals("  " + symbol2 + "  ") && grid[1][0].equals("  " + symbol2 + "  ") && grid[2][0].equals("  " + symbol2 + "  ") ){
-        win = true;
-        winner = "not";
-        break;
-      } else if(grid[0][1].equals("  " + symbol2 + "  ") && grid[1][1].equals("  " + symbol2 + "  ") && grid[2][1].equals("  " + symbol2 + "  ") ){
-        win = true;
-        winner = "not";
-        break;
-      } else if(grid[0][2].equals("  " + symbol2 + "  ") && grid[1][2].equals("  " + symbol2 + "  ") && grid[2][2].equals("  " + symbol2 + "  ")){
-        win = true;
-        winner = "not";
-        break;
-      } else if(grid[0][0].equals("  " + symbol2 + "  ") && grid[1][1].equals("  " + symbol2 + "  ") && grid[2][2].equals("  " + symbol2 + "  ") ){
-        win = true;
-        winner = "not";
-        break;
-      } else if(grid[0][2].equals("  " + symbol2 + "  ") && grid[1][1].equals("  " + symbol2 + "  ") && grid[2][0].equals("  " + symbol2 + "  ") ){
-        win = true;
-        winner = "not";
-        break;
-      }
-
+      for(int y = 0; y < 3; y++){
+      if(grid[1][y].equals("empty")){
+      grid[1][y] == "  " + symbol2 + "  ";
     }
-    if(winner.equals("me")){
-      System.out.println("------------------------------------------------------");
-      System.out.println(grid[0][0] + " || " + grid[0][1] + " || " + grid[0][2]);
-      System.out.println("=====================");
-      System.out.println(grid[1][0] + " || " + grid[1][1] + " || " + grid[1][2]);
-      System.out.println("=====================");
-      System.out.println(grid[2][0] + " || " + grid[2][1] + " || " + grid[2][2]);
-      System.out.println("You Won!\n");
-      return true;
-    }else if(winner.equals("not")){
-      System.out.println("------------------------------------------------------");
-      System.out.println(grid[0][0] + " || " + grid[0][1] + " || " + grid[0][2]);
-      System.out.println("=====================");
-      System.out.println(grid[1][0] + " || " + grid[1][1] + " || " + grid[1][2]);
-      System.out.println("=====================");
-      System.out.println(grid[2][0] + " || " + grid[2][1] + " || " + grid[2][2]);
-      System.out.println("You Lost...\n");
-      return false;
-    }else if(winner.equals("tie")){
-
-      System.out.println("------------------------------------------------------");
-      System.out.println(grid[0][0] + " || " + grid[0][1] + " || " + grid[0][2]);
-      System.out.println("=====================");
-      System.out.println(grid[1][0] + " || " + grid[1][1] + " || " + grid[1][2]);
-      System.out.println("=====================");
-      System.out.println(grid[2][0] + " || " + grid[2][1] + " || " + grid[2][2]);
-      System.out.println("Seems to be a tie...");
-      return false;
-    }
-    return false;
   }
+}*/
+pos = (int) (Math.random() * (cpu.size() - 1) );
+posfinal = cpu.get(pos);
+if( posfinal <= 3){
+  grid[0][posfinal - 1] = "  " + symbol2 + "  ";
+  selection[0][posfinal - 1] = " ";
+  possible.set(posfinal - 1,0);
+} else if( posfinal <= 6){
+  grid[1][posfinal - 4] = "  " + symbol2 + "  ";
+  selection[1][posfinal - 4] = " ";
+  possible.set(posfinal - 1,0);
+} else if( posfinal <= 9){
+  grid[2][posfinal - 7] = "  " + symbol2 + "  ";
+  selection [2][posfinal - 7] = " ";
+  possible.set(posfinal - 1,0);
+}
+
+if(grid[0][0].equals("  " + symbol2 + "  ") && grid[0][1].equals("  " + symbol2 + "  ") && grid[0][2].equals("  " + symbol2 + "  ")){
+  win = true;
+  winner = "not";
+  break;
+} else if(grid[1][0].equals("  " + symbol2 + "  ") && grid[1][1].equals("  " + symbol2 + "  ") && grid[1][2].equals("  " + symbol2 + "  ")){
+  win = true;
+  winner = "not";
+  break;
+} else if(grid[2][0].equals("  " + symbol2 + "  ") && grid[2][1].equals("  " + symbol2 + "  ") && grid[2][2].equals("  " + symbol2 + "  ")){
+  win = true;
+  winner = "not";
+  break;
+} else if(grid[0][0].equals("  " + symbol2 + "  ") && grid[1][0].equals("  " + symbol2 + "  ") && grid[2][0].equals("  " + symbol2 + "  ") ){
+  win = true;
+  winner = "not";
+  break;
+} else if(grid[0][1].equals("  " + symbol2 + "  ") && grid[1][1].equals("  " + symbol2 + "  ") && grid[2][1].equals("  " + symbol2 + "  ") ){
+  win = true;
+  winner = "not";
+  break;
+} else if(grid[0][2].equals("  " + symbol2 + "  ") && grid[1][2].equals("  " + symbol2 + "  ") && grid[2][2].equals("  " + symbol2 + "  ")){
+  win = true;
+  winner = "not";
+  break;
+} else if(grid[0][0].equals("  " + symbol2 + "  ") && grid[1][1].equals("  " + symbol2 + "  ") && grid[2][2].equals("  " + symbol2 + "  ") ){
+  win = true;
+  winner = "not";
+  break;
+} else if(grid[0][2].equals("  " + symbol2 + "  ") && grid[1][1].equals("  " + symbol2 + "  ") && grid[2][0].equals("  " + symbol2 + "  ") ){
+  win = true;
+  winner = "not";
+  break;
+}
+
+}
+if(winner.equals("me")){
+  System.out.println("------------------------------------------------------");
+  System.out.println(grid[0][0] + " || " + grid[0][1] + " || " + grid[0][2]);
+  System.out.println("=====================");
+  System.out.println(grid[1][0] + " || " + grid[1][1] + " || " + grid[1][2]);
+  System.out.println("=====================");
+  System.out.println(grid[2][0] + " || " + grid[2][1] + " || " + grid[2][2]);
+  System.out.println("You Won!\n");
+  return true;
+}else if(winner.equals("not")){
+  System.out.println("------------------------------------------------------");
+  System.out.println(grid[0][0] + " || " + grid[0][1] + " || " + grid[0][2]);
+  System.out.println("=====================");
+  System.out.println(grid[1][0] + " || " + grid[1][1] + " || " + grid[1][2]);
+  System.out.println("=====================");
+  System.out.println(grid[2][0] + " || " + grid[2][1] + " || " + grid[2][2]);
+  System.out.println("You Lost...\n");
+  return false;
+}else if(winner.equals("tie")){
+
+  System.out.println("------------------------------------------------------");
+  System.out.println(grid[0][0] + " || " + grid[0][1] + " || " + grid[0][2]);
+  System.out.println("=====================");
+  System.out.println(grid[1][0] + " || " + grid[1][1] + " || " + grid[1][2]);
+  System.out.println("=====================");
+  System.out.println(grid[2][0] + " || " + grid[2][1] + " || " + grid[2][2]);
+  System.out.println("Seems to be a tie...");
+  return false;
+}
+return false;
+}
 
 
 }

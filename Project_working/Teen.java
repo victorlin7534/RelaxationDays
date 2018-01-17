@@ -2,9 +2,6 @@ import java.util.Random;
 import cs1.Keyboard;
 
 public class Teen extends Human{
-  //instance variables
-
-  //private int chance; //probability to obtain a significant other
 
   //default constructor
   public Teen(Human o){
@@ -19,17 +16,6 @@ public class Teen extends Human{
     _future = "";
     _income = 0;
   }
-
-  /*public void findFuture(){
-    if(_age == 18){
-      if(Math.random() > 0.5){
-        _mentalHealth -= 2;
-        _future = "college";
-      }else{
-        _future = "working";
-      }
-    }
-  }*/
 
   public void study(){
     _mentalHealth += 0.25;
@@ -49,24 +35,21 @@ public class Teen extends Human{
     }
   }
 
-public void partTime(int hours){
-  System.out.println(this._name + " likes to make money!");
-  _mentalHealthf = _mentalHealth;
-  _moneyf = _money;
-  _mentalHealth -= 0.5;
-  _money += 7 * hours;
-}
+  public void partTime(int hours){
+    System.out.println(this._name + " likes to make money!");
+    _mentalHealthf = _mentalHealth;
+    _moneyf = _money;
+    _mentalHealth -= 0.5;
+    _money += 7 * hours;
+  }
 
-public void sleep(){
-  System.out.println("*...snooze...*");
-  _mentalHealth += 0.5;
-}
+  public void sleep(){
+    System.out.println("*...snooze...*");
+    _mentalHealth += 0.5;
+  }
 
-public void makeFriends(){
-
-}
-
-public void workout(){
-
-}
+  public void workout(){
+    _physHealthf = _physHealth;
+    _physHealth += 1.5;
+  }
 }// end class Teen

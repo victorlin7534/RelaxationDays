@@ -16,9 +16,9 @@ public abstract class Human{
   protected int _income;
   protected boolean _hasChild;
 
-  protected String _sickness;
-  protected String _sickType;
-  protected String _sickTypef;
+  protected String _sickness = "";
+  protected String _sickType = "";
+  protected String _sickTypef = "";
 
   //*************ACCESSOR METHODS*********************
   public String getName(){return _name;}
@@ -64,14 +64,16 @@ public abstract class Human{
     System.out.println(_name + " has died.");
   }
 
+//increments age of a human
   public void growUp(){_age += 1.0;}
 
+//replicates a human's sleep resulting in an increase in mental health
   public void sleep(){
     System.out.println(this.getName() + " feels very sleepy and takes a long rest.");
     System.out.println("His body is allowd to rest and gains +1.0 mental health");
     _mentalHealth += 1.0;
   }
-
+//overwritten toString. Displays changes
   public String toString(){
     if(getPhysicalf() == getPhysical() && getMentalf() == getMental() && getMoneyf() == getMoney()){
       return "\nName: " + getName() +
@@ -89,11 +91,13 @@ public abstract class Human{
     "\nSickness: " + _sickTypef + " -> " + _sickType;
   }
 
+//Decrease physical health due to injury
   public void getInjured() {
     _physHealth -= 1.0;
     System.out.println("Physical health decreased by 1.0 due to an injury");
   }
 
+//Replicate sex  with possibility of no infirmities, only STD, or STD and parenthood
   public void sex(){
     System.out.println("There isn't a condom in sight! Still want to have sex? a) yes b) no");
     String decision = Keyboard.readString();
@@ -126,7 +130,9 @@ public abstract class Human{
       break;
     }
   }
+//******************END SEX****************************
 
+//Gives a human a sickness
   public void getSick(String type){
     if(_sickness.length() == 0){
       switch(type){
@@ -151,7 +157,9 @@ public abstract class Human{
       }
       System.out.println("You got: " + _sickType);
     }
+//************END GET SICK***************
 
+//Decreases health due to sickness
   public void loseSick(){
     switch(_sickness){
       case "STDS":
@@ -176,7 +184,7 @@ public abstract class Human{
         break;
   }
 }
-
+//Simulates doing drugs with affects on physical and mental health
   public void doDrugs(){
     System.out.println("Would you like to do a) cocaine b) fentanyl c) lsd");
     String decision = Keyboard.readString();
@@ -201,7 +209,7 @@ public abstract class Human{
       break;
     }
   }
-
+//Replicates dealing drugs to make money
     public void dealDrugs(){
       System.out.println("Would you like to sell a) cocaine b) fentanyl c) lsd");
       String decision = Keyboard.readString();
@@ -217,7 +225,7 @@ public abstract class Human{
         break;
       }
     }
-
+//Simulates withdrawl symptoms of a drug with decreased mental health
     public void withdrawal(){
       System.out.println(this._name + " feels the pain of withdrawal symptoms... 'OWW MY HEAD'");
       _mentalHealth -= 0.2;
