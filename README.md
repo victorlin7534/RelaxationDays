@@ -17,3 +17,5 @@ Instruction to run program:
 3) javac Woo.java
 4) java Woo
 5) Respond to the program's prompts and interact with the program.
+
+Credits to artist Joan Stark for ANSCII art.
