@@ -96,11 +96,11 @@ public class Settings{
     	if( Minigames.quickType(x)){
           x._mentalHealth += 2.0;
     	    x._physHealth += 2.0;
-          if(_sickness.length() > 0){
+          if(x._sickness.length() > 0){
             if(Math.random() < 0.2){
-              _sickTypef = _sickType;
-              _sickType = "";
-              _sickness = "";
+              x._sickTypef = x._sickType;
+              x._sickType = "";
+              x._sickness = "";
               System.out.println("You have been cured");
             }
           }
@@ -143,10 +143,11 @@ public class Settings{
     		//add minigame here
     		x.workout();
     	    }
+          break;
 
     	case "c":
-
-
+        System.out.println("You have made a friend");
+        x._mentalHealth += 1.5;
     	}
     	return x;
     }

@@ -9,9 +9,9 @@ public class Woo{
     protected static HashMap RANDOM;
     protected static HashMap TYPE;
 
-    protected static ArrayList stdArray;
-    protected static ArrayList birthArray;
-    protected static ArrayList randomArray;
+    protected static ArrayList<String> stdArray;
+    protected static ArrayList<String> birthArray;
+    protected static ArrayList<String> randomArray;
 
     public static void create(){
     	STDS = new HashMap<String,Double>(3);
@@ -158,8 +158,8 @@ public class Woo{
     		    break;
     		}
     	    }
-          if(_physHealth == 1 || _mentalHealth == 1){
-            atHospital(a);
+          if(a._physHealth == 1 || a._mentalHealth == 1){
+            Settings.atHospital(a);
           }
           a.loseSick();
     	    a.growUp();

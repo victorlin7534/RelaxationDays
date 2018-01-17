@@ -1,4 +1,4 @@
-  import cs1.Keyboard;
+import cs1.Keyboard;
 import java.util.ArrayList;
 
 public abstract class Human{
@@ -85,7 +85,7 @@ public abstract class Human{
     "\nPhysical health: " + getPhysicalf() + " -> " + getPhysical() +
     "\nMental health: " + getMentalf() + " -> " + getMental() +
     "\nAge: " + getAge() +
-    "\nMoney: " + getMoneyf() + " -> " + getMoney()
+    "\nMoney: " + getMoneyf() + " -> " + getMoney() +
     "\nSickness: " + _sickTypef + " -> " + _sickType;
   }
 
@@ -133,19 +133,19 @@ public abstract class Human{
         case "sex":
           _sickness = "STDS";
           _sickTypef = "";
-          _sickType = stdArray.get(Settings.oneOf(0,2));
+          _sickType = Woo.stdArray.get(Settings.oneOf(0,2));
           break;
 
-        case "birth";
+        case "birth":
           _sickness = "BIRTH";
           _sickTypef = "";
-          _sickType = birthArray.get(Settings.oneOf(0,2));
+          _sickType = Woo.birthArray.get(Settings.oneOf(0,2));
           break;
 
         case "random":
           _sickness = "RANDOM";
           _sickTypef = "";
-          _sickType = randomArray.get(Settings.oneOf(0,2));
+          _sickType = Woo.randomArray.get(Settings.oneOf(0,2));
           break;
         }
       }
@@ -157,24 +157,25 @@ public abstract class Human{
       case "STDS":
         _physHealthf = _physHealth;
         _mentalHealthf = _mentalHealth;
-        _physHealth -= Woo.STDS.get(_sickType).doubleValue();
-        _mentalHealth -= Woo.STDS.get(_sickType).doubleValue();
+        _physHealth -= ((Double)Woo.STDS.get(_sickType)).doubleValue();
+        _mentalHealth -= ((Double)Woo.STDS.get(_sickType)).doubleValue();
         break;
 
       case "BIRTH":
         _physHealthf = _physHealth;
         _mentalHealthf = _mentalHealth;
-        _physHealth -= Woo.BIRTH.get(_sickType).doubleValue();
-        _mentalHealth -= Woo.BIRTH.get(_sickType).doubleValue();
+        _physHealth -= ((Double)Woo.BIRTH.get(_sickType)).doubleValue();
+        _mentalHealth -= ((Double)Woo.BIRTH.get(_sickType)).doubleValue();
         break;
 
       case "RANDOM":
         _physHealthf = _physHealth;
         _mentalHealthf = _mentalHealth;
-        _physHealth -= Woo.RANDOM.get(_sickType).doubleValue();
-        _mentalHealth -= Woo.RANDOM.get(_sickType).doubleValue();
+        _physHealth -= ((Double)Woo.RANDOM.get(_sickType)).doubleValue();
+        _mentalHealth -= ((Double)Woo.RANDOM.get(_sickType)).doubleValue();
         break;
   }
+}
 
   public void doDrugs(){
     System.out.println("Would you like to do a) cocaine b) fentanyl c) lsd");
